@@ -26,10 +26,32 @@ h3, p {
     font-size: 18px;
 }
 
-nav {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-section {
+    flex: 1 1 100%;
+}
+
+.about-section {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
     text-align: left;
 }
-  
+
+.about-section .aboutme {
+    flex: 0 1 28%;
+    margin-left: 12%;
+}
+
+.about-section .contact {
+    flex: 0 1 20%;
+    padding-left: 75px;
+}
+
 .profile-photo {
     background: #fff;
     border-radius: 100%;
@@ -58,30 +80,9 @@ a:link, a:active, a:visited {
     color: #0077B5;
 }
 
-.about-section {
-    margin-top: 30px;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-section div {
-    text-align: left;
-    display: inline-block;
-    vertical-align: top;
-}
-
 .about-section h2 {
     color: #000;
     margin-bottom: 10px;
-}
-
-.aboutme {
-    width: 30%;
-}
-
-.contact-padding {
-    padding-left: 100px;
 }
 
 .aboutme p {
@@ -102,4 +103,23 @@ a:link, a:active, a:visited {
     vertical-align: middle;
     position: relative;
     bottom: 4px;
+}
+
+@media all and (max-width:500px) {
+    .about-section {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .about-section .aboutme {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+    
+    .about-section .contact {
+        margin-top: 20px;
+        flex: 1 1 100%;
+        border: 1px solid red;
+        padding-left: 20px;
+    }
 }
