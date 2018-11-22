@@ -106,6 +106,15 @@ a:link, a:active, a:visited {
 }
 
 @media all and (max-width:500px) {
+    .fa-codepen {
+        font-size: 52px;
+        line-height: 52px;
+    }
+
+    .icon-link-text {
+        font-size: 24px;
+    }
+
     .about-section {
         flex-wrap: wrap;
         text-align: center;
@@ -115,11 +124,27 @@ a:link, a:active, a:visited {
         flex: 1 1 100%;
         margin: 0;
     }
-    
-    .about-section .contact {
-        margin-top: 20px;
+
+    .about-section .contact{
+        padding-left: 0;
+        margin-top: 30px;
         flex: 1 1 100%;
-        border: 1px solid red;
-        padding-left: 20px;
+    }
+    
+    .about-section .contact-icons {
+        margin-top: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact .icon-link-text {
+        display: none;
+    }
+
+    .fab, .fas {    
+        color: #333;
+        font-size: 56px;
+        padding: 0 14px;
     }
 }
