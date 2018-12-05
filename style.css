@@ -62,14 +62,11 @@ a:link, a:active, a:visited {
 .fab, .fas {    
     color: #333;
     font-size: 36px;
+    margin: 0 10px;
 }
 
 .fab:hover, .fas:hover, a:hover {
     color: #0077B5;
-}
-
-.fa-linkedin {
-    margin: 0 15px;
 }
 
 @media all and (max-width:500px) {
@@ -90,12 +87,7 @@ a:link, a:active, a:visited {
         width: 90%;
     }
 
-    .contact-icons i {    
-        color: #333;
-        font-size: 46px;
-    }
-
-    .fa-linkedin {
-        margin: 0 30px;
+    .fab, .fas {    
+        font-size: 38px;
     }
 }
