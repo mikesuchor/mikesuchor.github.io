@@ -5,22 +5,22 @@ body {
 
 h1 {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 24px;
     color: #333;
     margin: 8px 0;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 16px;
     color: #777;
 }
 
 a {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 16px 0 20px 0;
     line-height: 24px;
 }
@@ -38,8 +38,8 @@ p {
 }
 
 .about-section, .contact-section {
-    margin: 30px auto 0 auto;
-    width: 40%;
+    margin: 10px auto 0 auto;
+    width: 400px;
 }
 
 .profile-photo {
@@ -83,8 +83,7 @@ a:link, a:active, a:visited {
     }
 
     .about-section, .contact-section {
-        margin: 10px auto 0 auto;
-        width: 90%;
+        width: 340px;
     }
 
     .fab, .fas {    
