@@ -83,15 +83,15 @@ body {
     color: black;
 }
 
+.contact-icons a:hover > i {
+    color: goldenrod;
+}
+
 .fab, .fas {    
     color: #000;
     font-size: 5vh;
     margin: 0 2vh;
     vertical-align: middle;
-}
-
-.fab:hover, .fas:hover {
-    color: goldenrod;
 }
 
 .fa-codepen {
