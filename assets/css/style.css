@@ -246,11 +246,6 @@ body {
     border-color: transparent transparent #D9665B;
 }
 
-    .contact-section p {
-        padding-top: 2vh;
-        font-size: 1.5vh;
-    }
-
     .contact-section .contact-icons {
         display: flex;
         justify-content: center;
@@ -258,10 +253,15 @@ body {
 
         .contact-section .contact-icons i {    
             color: white;
-            font-size: 4vh;
+            font-size: 6vh;
             margin: 0 1vh;
             vertical-align: middle;
         }
+
+    .contact-section p {
+        padding-top: 2vh;
+        font-size: 1.75vh;
+    }
 
 /* Responsive Sizes */
 
@@ -344,8 +344,4 @@ body {
         display: flex;
         flex-direction: row;
     }
-
-        .contact-icons i {
-            font-size: 5vh;
-        }
 }
