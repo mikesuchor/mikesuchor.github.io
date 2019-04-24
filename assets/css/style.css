@@ -67,7 +67,7 @@ body {
 .header-section {
     padding: 25vh 0;
     height: 98vh;
-    background-image: url(mountains.jpg);
+    background-image: url(../images/mountains.jpg);
     background-size: 100% 100%;
 }
 
@@ -276,8 +276,6 @@ body {
     .header-section {
         padding: 25vh 0;
         height: 100vh;
-        background-image: url(mountains.jpg);
-        background-size: 100% 100%;
     }
 
     .about-section {
