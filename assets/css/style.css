@@ -140,7 +140,7 @@ body {
 
 .portfolio-section {
     position: relative;
-    height: 140vh;
+    height: 190vh;
     background: #4D628C;
     text-align: left;
 }
@@ -232,7 +232,7 @@ body {
 
 .contact-section {
     position: relative;
-    height: 10vh;
+    height: 15vh;
     background: #D9665B;
 }
 
@@ -316,7 +316,7 @@ body {
     /* Portfolio Section */
 
     .portfolio-section {
-        height: 250vh;
+        height: 290vh;
     }
 
         .portfolio-section h2 {
