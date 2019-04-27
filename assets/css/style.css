@@ -309,9 +309,8 @@ body {
     /* About Section */
 
     .about-section {
-        height: 70vh;
+        height: 72vh;
         flex-direction: column;
-        text-align: center;
     }
 
         .about-section h3, .about-section p {
@@ -327,16 +326,18 @@ body {
 
         .about-section p {
             width: 90%;
-            margin: 2.5vh auto;
+            margin: 2.5vh 0 0 4vh;
             padding: 0;
+            font-size: 2.25vh;
         }
 
         .about-section .about-me {
             flex: 0;
-            padding-bottom: 2vh;
+            padding-bottom: 3vh;
         }
 
         .about-section .profile-photo-container {
+            text-align: center;
             margin-top: 0;
         }
 
