@@ -13,29 +13,34 @@ h1, h2, h3, h4, p, a {
 
 h1 {
     font-weight: 800;
-    font-size: 5vh;
+    font-size: 3vw;
     color: #090D26;
     letter-spacing: 0.25em;
 }
 
 h2 {
     font-weight: 400;
-    font-size: 3.5vh;
+    font-size: 2vw;
 }
 
 h3 {
     font-weight: 400;
-    font-size: 2.5vh;
+    font-size: 1.75vw;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 1.5vw;
 }
 
 p {
     font-weight: 400;
-    font-size: 2.5vh;
+    font-size: 1.4vw;
 }
 
 a {
     text-decoration: none;
-    font-size: 1.75vh;
+    font-size: 0.75vw;
 }
 
 a:visited {
@@ -69,7 +74,7 @@ body {
 .header-section {
     padding: 25vh 0;
     height: 98vh;
-    background-image: url(../images/mountains.jpg);
+    background-image: url(../images/mountains-sm.jpg);
     background-size: 100% 100%;
 }
 
@@ -94,9 +99,10 @@ body {
 
 .about-section {
     position: relative;
-    height: 50vh;
+    height: 60vh;
     background: #91C4D9;
     text-align: left;
+    display: flex;
 }
     
 .about-section:before {
@@ -109,8 +115,13 @@ body {
     border-color: transparent transparent #91C4D9;
 }
 
-    .about-section div {
-        width: 70%;
+    .about-section .about-me {
+        flex: 1.5;
+    }
+
+    .about-section .profile-photo-container {
+        flex: 1;
+        margin-top: 7vh;
     }
 
     .about-section h2 {
@@ -119,28 +130,26 @@ body {
     }
 
     .about-section h2, .about-section p {
-        width: 50%;
-        color: white;
+        color: #090D26;
         margin-left: 22vw;
     }
 
     .about-section p {
-        padding: 1vh 0 0 0;
+        padding-top: 2.5vh;
     }
 
     .about-section .profile-photo {
-        float: right;
         background: #D9AF8B;
         border-radius: 100%;
-        height: 20vh;
-        padding: 0.75vh;
+        width: 15vw;
+        margin-left: 2vw;
     }
 
 /* Portfolio Section */
 
 .portfolio-section {
     position: relative;
-    height: 190vh;
+    height: 200vh;
     background: #4D628C;
     text-align: left;
 }
@@ -188,7 +197,7 @@ body {
             margin: 0 3vh;
         }
 
-            .portfolio-projects .project-description h3 {
+            .portfolio-projects .project-description h4 {
                 padding: 1vh 0 1vh 0;
                 border-bottom: 0.15vh solid #91C4D9;
             }
@@ -213,7 +222,8 @@ body {
 
             .portfolio-projects .project-description p {
                 padding: 1.5vh 0 0 0;
-                font-size: 1.75vh;
+                font-size: 1vw;
+                line-height: 2.75vh;
             }
 
             .portfolio-projects .project-description .project-icons {
@@ -224,7 +234,7 @@ body {
             }
 
             .portfolio-projects .project-description .project-icons i {
-                font-size: 4vh;
+                font-size: 2vw;
                 margin: 0 1vh;
             }
 
@@ -253,19 +263,19 @@ body {
 
         .contact-section .contact-icons i {    
             color: white;
-            font-size: 6vh;
+            font-size: 3vw;
             margin: 0 1vh;
             vertical-align: middle;
         }
 
     .contact-section p {
         padding-top: 2vh;
-        font-size: 1.75vh;
+        font-size: 1vw;
     }
 
 /* Responsive Sizes */
 
-@media all and (max-width:500px) {
+@media screen and (max-width:555px) {
     h1 {
         font-size: 2.5vh;
     }
