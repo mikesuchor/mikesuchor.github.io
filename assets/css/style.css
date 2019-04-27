@@ -309,7 +309,7 @@ body {
     /* About Section */
     
     .about-section {
-        height: 65vh;
+        height: 60vh;
     }
 
         .about-section div {
@@ -318,22 +318,19 @@ body {
             padding: 0;
         }
 
-        .about-section h2 {
-            width: 70%;
-            display: inline-block;
-            margin: 4vh 4vh 2vh;
-            padding: 0 0 1vh 0;
-            font-size: 4vh;
+        .about-section h3 {
+            margin-left: 8vw;
         }
 
         .about-section p {
-            width: 70%;
-            margin: 0 0 2vh 4vh;
+            width: 100%;
+            margin: 2vh 0 2vh 8vw;
             padding: 0;
         }
 
         .about-section .profile-photo {
-            margin-right: 2vh;
+            width: 18vh;
+            margin: 2vh 0 0 2vh;
         }
 
     /* Portfolio Section */
@@ -348,6 +345,11 @@ body {
             margin: 0 4vh 2vh;
             padding: 0 0 1vh 0;
             font-size: 4vh;
+        }
+
+        .portfolio-section h3 {
+            padding-top: 0;
+            margin: 0 0 5vh 8vw;
         }
 
         .portfolio-section .portfolio-projects {
