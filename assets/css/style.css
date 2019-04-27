@@ -283,6 +283,14 @@ body {
     h2 {
         font-size: 1.75vh;
     }
+
+    h3 {
+        font-size: 1.5vh;
+    }
+    
+    h4 {
+        font-size: 1.25vh;
+    }
     
     p {
         font-size: 2vh;
@@ -326,7 +334,7 @@ body {
     /* Portfolio Section */
 
     .portfolio-section {
-        height: 290vh;
+        height: 350vh;
     }
 
         .portfolio-section h2 {
@@ -352,8 +360,16 @@ body {
 
     /* Contact Section */
 
+    .contact-section .contact-icons i {
+        font-size: 3vh;
+    }
+
     .contact-icons {
         display: flex;
         flex-direction: row;
+    }
+
+    .contact-section p {
+        font-size: 1.5vh;
     }
 }
