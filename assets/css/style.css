@@ -371,8 +371,12 @@ body {
 
     /* Contact Section */
 
+    .contact-section {
+        height: 20vh;
+    }
+
     .contact-section .contact-icons i {
-        font-size: 3vh;
+        font-size: 6vh;
     }
 
     .contact-icons {
