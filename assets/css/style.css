@@ -124,12 +124,12 @@ body {
         margin-top: 7vh;
     }
 
-    .about-section h2 {
+    .about-section h3 {
         padding: 5vh 0 1vh 0;
         border-bottom: 0.25vh solid #4D628C;
     }
 
-    .about-section h2, .about-section p {
+    .about-section h3, .about-section p {
         color: #090D26;
         margin-left: 22vw;
     }
@@ -164,7 +164,7 @@ body {
     border-color: transparent transparent #4D628C;
 }
 
-.portfolio-section h2 {
+.portfolio-section h3 {
     width: 36%;
     padding: 5vh 0 1vh 0;
     border-bottom: 0.25vh solid #91C4D9;
@@ -242,7 +242,7 @@ body {
 
 .contact-section {
     position: relative;
-    height: 15vh;
+    height: 12vh;
     background: #D9665B;
 }
 
@@ -285,15 +285,20 @@ body {
     }
 
     h3 {
-        font-size: 1.5vh;
+        font-size: 3vh;
     }
     
     h4 {
-        font-size: 1.25vh;
+        font-size: 2.5vh;
     }
     
     p {
         font-size: 2vh;
+    }
+
+    a {
+        font-size: 1.5vh;
+        line-height: 1.5vh;
     }
 
     .header-section {
@@ -356,6 +361,10 @@ body {
             
             .portfolio-projects .project-description p {
                 font-size: 2vh;
+            }
+
+            .portfolio-projects .project-description .project-icons i {
+                font-size: 4vh;
             }
 
     /* Contact Section */
