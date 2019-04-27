@@ -126,7 +126,7 @@ body {
 
     .about-section h3 {
         padding: 5vh 0 1vh 0;
-        border-bottom: 0.25vh solid #4D628C;
+        border-bottom: 2px solid #4D628C;
     }
 
     .about-section h3, .about-section p {
@@ -139,7 +139,7 @@ body {
     }
 
     .about-section .profile-photo {
-        background: #D9AF8B;
+        border: 6px solid #D9AF8B;
         border-radius: 100%;
         width: 15vw;
         margin-left: 2vw;
@@ -167,7 +167,7 @@ body {
 .portfolio-section h3 {
     width: 36%;
     padding: 5vh 0 1vh 0;
-    border-bottom: 0.25vh solid #91C4D9;
+    border-bottom: 2px solid #91C4D9;
     margin: 0 0 5vh 22vw;
     color: white;
 }
@@ -185,7 +185,7 @@ body {
             background: #090D26;
             margin-bottom: 5vh;
             border-radius: 0.5vh;
-            border: 0.3vh solid #090D26;
+            border: 2px solid #090D26;
         }
 
             .portfolio-projects .project-container img {
@@ -199,7 +199,7 @@ body {
 
             .portfolio-projects .project-description h4 {
                 padding: 1vh 0 1vh 0;
-                border-bottom: 0.15vh solid #91C4D9;
+                border-bottom: 1px solid #91C4D9;
             }
             
             .portfolio-section a {
@@ -307,30 +307,43 @@ body {
     }
 
     /* About Section */
-    
+
     .about-section {
-        height: 60vh;
+        height: 70vh;
+        flex-direction: column;
+        text-align: center;
     }
 
-        .about-section div {
-            width: 100%;
-            margin: 0;
-            padding: 0;
+        .about-section h3, .about-section p {
+            margin-left: 0;
         }
 
         .about-section h3 {
-            margin-left: 8vw;
+            text-align: left;
+            margin: 4vh 0 0 4vh;
+            padding: 0;
+            width: 38%;
         }
 
         .about-section p {
-            width: 100%;
-            margin: 2vh 0 2vh 8vw;
+            width: 90%;
+            margin: 2.5vh auto;
             padding: 0;
         }
 
+        .about-section .about-me {
+            flex: 0;
+            padding-bottom: 2vh;
+        }
+
+        .about-section .profile-photo-container {
+            margin-top: 0;
+        }
+
         .about-section .profile-photo {
-            width: 18vh;
-            margin: 2vh 0 0 2vh;
+            width: 23vh;
+            margin: 0;
+            padding: 0;
         }
 
     /* Portfolio Section */
@@ -349,7 +362,7 @@ body {
 
         .portfolio-section h3 {
             padding-top: 0;
-            margin: 0 0 5vh 8vw;
+            margin: 0 0 5vh 4vh;
         }
 
         .portfolio-section .portfolio-projects {
@@ -372,11 +385,12 @@ body {
     /* Contact Section */
 
     .contact-section {
-        height: 20vh;
+        height: 26vh;
     }
 
     .contact-section .contact-icons i {
-        font-size: 6vh;
+        font-size: 8vh;
+        margin: 2vh;
     }
 
     .contact-icons {
@@ -385,6 +399,6 @@ body {
     }
 
     .contact-section p {
-        font-size: 1.5vh;
+        font-size: 1.75vh;
     }
 }
