@@ -199,8 +199,9 @@ body {
         }
 
             .portfolio-projects .project-description h4 {
-                padding: 1vh 0 1vh 0;
+                padding: 1vh 0 0 0;
                 border-bottom: 1px solid #91C4D9;
+                line-height: 36px;
             }
             
             .portfolio-section a {
