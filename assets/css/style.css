@@ -274,6 +274,10 @@ body {
             vertical-align: middle;
         }
 
+        .contact-section .contact-icons i:hover {
+            color: #ddd;
+        }
+
     .contact-section p {
         padding-top: 2vh;
         font-size: 1vw;
