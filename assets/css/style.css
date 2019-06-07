@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
 h1, h2, h3, h4, p, a {
     font-family: "Open Sans", Helvetica, sans-serif;
     color: white;
@@ -308,7 +312,7 @@ body {
         height: 100vh;
     }
 
-    /* About Section */
+    /* About Section - Responsive*/
 
     .about-section {
         padding-bottom: 15vh;
@@ -349,7 +353,7 @@ body {
             padding: 0;
         }
 
-    /* Portfolio Section */
+    /* Portfolio Section - Responsive */
 
         .portfolio-section h2 {
             display: inline-block;
@@ -381,7 +385,7 @@ body {
                 font-size: 4vh;
             }
 
-    /* Contact Section */
+    /* Contact Section - Responsive */
 
     .contact-section {
         height: 26vh;
