@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-    width: 0px;
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 h1, h2, h3, h4, p, a {
