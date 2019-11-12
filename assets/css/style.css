@@ -373,6 +373,11 @@ body {
             margin: 0 0 5vh 4vh;
         }
 
+            .portfolio-projects .project-description a {
+                line-height: 36px;
+                font-size: 12px;
+            }
+
         .portfolio-section .portfolio-projects {
             width: 90%;
             flex-direction: column;
