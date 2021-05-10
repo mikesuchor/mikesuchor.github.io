@@ -1,229 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Michael Suchorolski, a Full Stack JavaScript Developer working out of Miami" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Michael Suchorolski | Full Stack JavaScript Developer</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800">
-</head>
-<body>
-  <div class="container">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon//favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon//favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
 
-    <!-- Header Section -->
-
-    <header class="header-section">
-      <h1>MICHAEL SUCHOROLSKI</h1>
-      <h2>FULL STACK JAVASCRIPT DEVELOPER</h2>
+    <header class="hero">
+      <img class="hero__overlay" src="assets/images/mikepng.png" />
+      <div class="hero__titles">
+        <h1 class="hero__title">MICHAEL SUCHOROLSKI</h1>
+        <h2 class="hero__subtitle">FULL STACK JAVASCRIPT DEVELOPER</h2>
+      </div>
     </header>
-    
+
     <!-- About Section -->
 
-    <section class="about-section">
-      <div class="about-me">
-        <h3>ABOUT ME</h3>        
-        <p>Hi, I'm Michael, a Full Stack JavaScript Developer who loves building innovative, responsive websites and apps with new technologies.</p>
-        <p>I'm well versed in multiple programming languages and frameworks, with working experience in HTML, CSS, JavaScript, jQuery, React.js, Angular.js, Node.js, Express.js, and MongoDB.</p>
-      </div> 
-      <div data-aos="zoom-in-left" data-aos-duration="1000" class="profile-photo-container">
-        <img class="profile-photo" src="assets/images/profile-photo.jpg" alt="profile picture">
+    <div class="abouttrigger"></div>
+
+    <section class="about">
+      <img class="about__overlay" src="assets/images/mikepng2.png" />
+      <div class="about__description">
+        <h3>ABOUT ME</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>
+          Nisi, aut cumque optio ipsa molestiae incidunt omnis laudantium, tenetur expedita accusantium eligendi qui!
+          Pariatur sed possimus consequatur modi tempora illo consequuntur.
+        </p>
+        <p>
+          Nisi, aut cumque optio ipsa molestiae incidunt omnis laudantium, tenetur expedita accusantium eligendi qui!
+          Pariatur sed possimus consequatur modi tempora illo consequuntur.
+        </p>
+        <a href="/blog.html"><button>VISIT MY BLOG</button></a>
+      </div>
+      <div class="about__mosaic">
+        <img class="mosaic1" src="/assets/images/bicycle.webp" width="430px" height="200px" alt="" />
+        <img class="mosaic2" src="/assets/images/bridge.webp" width="200px" height="430px" alt="" />
+        <img class="mosaic3" src="/assets/images/verticalbeach.webp" width="200px" height="430px" alt="" />
+        <img class="mosaic-center" src="/assets/images/profile-photo.webp" width="400px" height="400px" alt="" />
+        <img class="mosaic4" src="/assets/images/surf.webp" width="200px" height="200px" alt="" />
+        <img class="mosaic5" src="/assets/images/camera.webp" width="200px" height="200px" alt="" />
+        <div class="mosaic6">
+          <a class="mosaic6_1" href="https://github.com/mikesuchor">
+            <i class="about__mosaic__icon fab fa-github-square fa-2x" title="Github"></i>
+          </a>
+          <a class="mosaic6_2" href="https://www.linkedin.com/in/michael-suchorolski/">
+            <i class="about__mosaic__icon fab fa-linkedin fa-2x" title="LinkedIn"></i>
+          </a>
+          <a class="mosaic6_3" href="mailto:mikesuchor@gmail.com">
+            <i class="about__mosaic__icon fas fa-envelope-square fa-2x" title="Email"></i>
+          </a>
+        </div>
       </div>
     </section>
-      
-    <!-- Portfolio Section -->
 
-    <section class="portfolio-section">
-      <h3>PORTFOLIO</h3>
-      <div class="portfolio-projects">
+    <!-- Projects Section -->
+
+    <section class="projects">
+      <img class="projects__overlay" src="assets/images/mikepng3.png" />
+      <h3 class="projects__title">PROJECTS</h3>
+      <div class="projects__items">
+        <!-- Harkus Website Redesign Project -->
+        <div class="projects__item">
+          <div class="project">
+            <a class="project__link" href="https://www.harkus.com/">
+              <img class="project__image" src="assets/images/projects/harkus.jpg" alt="harkus website project" />
+            </a>
+            <div class="project__description">
+              <h4 class="project__title">HARKUS</h4>
+              <p class="project__summary">Harkus</p>
+              <p class="project__technologies">WordPress, HTML, CSS, JavaScript, PHP</p>
+              <div class="project__icons">
+                <i class="fab fa-wordpress fa-lg"></i>
+                <i class="fab fa-html5 fa-lg"></i>
+                <i class="fab fa-css3-alt fa-lg"></i>
+                <i class="fab fa-js fa-lg"></i>
+                <i class="fab fa-php fa-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Medlior Website Redesign Project -->
+        <div class="projects__item">
+          <div class="project">
+            <a class="project__link" href="https://www.medlior.com/">
+              <img class="project__image" src="assets/images/projects/medlior.jpg" alt="medlior website project" />
+            </a>
+            <div class="project__description">
+              <h4 class="project__title">MEDLIOR</h4>
+              <p class="project__summary">Medlior</p>
+              <p class="project__technologies">WordPress, HTML, CSS, JavaScript, PHP</p>
+              <div class="project__icons">
+                <i class="fab fa-wordpress fa-lg"></i>
+                <i class="fab fa-html5 fa-lg"></i>
+                <i class="fab fa-css3-alt fa-lg"></i>
+                <i class="fab fa-js fa-lg"></i>
+                <i class="fab fa-php fa-lg"></i>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Movie Database Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://ms-movie-database.netlify.com/"><img src="assets/images/movie-database.jpg" alt="movie database project"></a>
-          <div class="project-description">
-            <h4>MOVIE DB
-              <span>
-                <a href="https://github.com/mikesuchor/movie-database">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://ms-movie-database.netlify.com/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Movie database app with options to show movies or TV shows, search by name, and filter by genre.</p>
-            <p>Built with HTML, CSS, JavaScript, React, Firebase, YouTube, using The Movie Database API.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-js"></i>
-              <i class="fab fa-react"></i>
-              <i class="fas fa-fire"></i>
-              <i class="fab fa-youtube"></i>
+        <div class="projects__item">
+          <div class="project">
+            <a class="project__link" href="https://ms-movie-database.netlify.com/">
+              <img class="project__image" src="assets/images/projects/moviedb.jpg" alt="movie database project" />
+            </a>
+            <div class="project__description">
+              <h4 class="project__title">MOVIE DB</h4>
+              <p class="project__summary">
+                Movie database app with options to show movies or TV shows, search by name, and filter by genre. Uses
+                The Movie Database API.
+              </p>
+              <p class="project__technologies">HTML, CSS, JavaScript, React, Firebase</p>
+              <div class="project__icons">
+                <i class="fab fa-html5 fa-lg"></i>
+                <i class="fab fa-css3-alt fa-lg"></i>
+                <i class="fab fa-js fa-lg"></i>
+                <i class="fab fa-react fa-lg"></i>
+                <i class="fas fa-fire fa-lg"></i>
+              </div>
             </div>
           </div>
         </div>
-        
-        <!-- Recipe Tinder Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://recipe-tinder.netlify.com/"><img src="assets/images/recipe-tinder.jpg" alt="recipe tinder project"></a>
-          <div class="project-description">
-            <h4>RECIPE TINDER
-              <span>
-                <a href="">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://recipe-tinder.netlify.com/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Recipe app with searchable recipes. To be adapted to a Tinder app for finding delicious recipes, swipe right!</p>
-            <p>Built with HTML, CSS, JavaScript, React, React Router, using Food2Fork API.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-js"></i>
-              <i class="fab fa-react"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Menta Restobar Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://menta-restobar.herokuapp.com/"><img src="assets/images/menta-restobar.jpg" alt="menta restobar restaurant project"></a>
-          <div class="project-description">
-            <h4>MENTA RESTOBAR
-              <span>
-                <a href="https://github.com/mikesuchor/menta-restobar">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://menta-restobar.herokuapp.com/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Menta Restobar Restaurant Website</p>
-            <p>Built with HTML, CSS, JavaScript, Node, and Express.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-js"></i>
-              <i class="fab fa-node"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Takeoff Vacations Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://mikesuchor.github.io/takeoff-vacations/"><img src="assets/images/takeoff-vacations.jpg" alt="takeoff vacations project"></a>
-          <div class="project-description">
-            <h4>TAKEOFF
-              <span>
-                <a href="https://github.com/mikesuchor/takeoff-vacations">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://mikesuchor.github.io/takeoff-vacations/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Concept - Travel booking website for booking flights, tours, and vacations.</p>
-            <p>Built with HTML, CSS.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dashboard Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://prod-dashboard.netlify.com/"><img src="assets/images/productivity-dashboard.jpg" alt="productivity dashboard project"></a>
-          <div class="project-description">
-            <h4>DASHBOARD
-              <span>
-                <a href="https://github.com/mikesuchor/productivity-dashboard">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://prod-dashboard.netlify.com/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Productivity dashboard app with a task list, calendar, weather, and date/time, to help organize my day.</p>
-            <p>Built with HTML, CSS, JavaScript, React, and date-fns, using Dark Sky Weather API.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-js"></i>
-              <i class="fab fa-react"></i>
-            </div>
-          </div>
-        </div>
-      
-        <!-- Femme Lifestyle Project -->
-
-        <div data-aos="fade-up" class="project-container">
-          <a href="https://mikesuchor.github.io/femme-website/"><img src="assets/images/femme-lifestyle.jpg" alt="femme lifestyle project"></a>
-          <div class="project-description">
-            <h4>FEMME
-              <span>
-                <a href="https://github.com/mikesuchor/femme-website">
-                  <i class="fab fa-github" title="Github"></i>
-                  SOURCE
-                </a>
-                <a href="https://mikesuchor.github.io/femme-website/">
-                  <i class="fab fa-codepen" title="Codepen"></i>
-                  VIEW
-                </a>
-              </span>
-            </h4>
-            <p>Femme lifestyle and social media website concept built with the Client's design and collaboration.</p>
-            <p>Built with HTML, CSS, JavaScript.</p>
-            <div class="project-icons">
-              <i class="fab fa-html5"></i>
-              <i class="fab fa-css3-alt"></i>
-              <i class="fab fa-js"></i>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
     <!-- Footer Section -->
-
-    <footer class="contact-section">
-      <div class="contact-icons">
-        <a href="https://github.com/mikesuchor"><i class="fab fa-github-square" title="Github"></i></a>
-        <a href="https://www.linkedin.com/in/michael-suchorolski"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
-        <a href="mailto:mikesuchor@gmail.com"><i class="fas fa-envelope-square" title="Email"></i></a>
-        <a href="https://codepen.io/mikesuchor/"><i class="fab fa-codepen" title="Codepen"></i></a>
-      </div>
-      <p>Designed and created by Michael Suchorolski &copy; 2019</p>
+    <footer class="footer">
+      <p>
+        Designed and created by
+        <a href="https://www.linkedin.com/in/michael-suchorolski/">Michael Suchorolski</a>
+        &copy; 2020
+      </p>
+      <p class="footer__links">
+        <a href="https://www.github.com/mikesuchor">Github</a>
+        <a href="https://www.linkedin.com/in/michael-suchorolski">LinkedIn</a>
+        <a href="mailto:mikesuchor@gmail.com">Email</a>
+      </p>
     </footer>
-  </div>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-</body>
+
+    <!-- Scripts -->
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/ScrollMagic.min.js"></script>
+    <script src="assets/js/animation.gsap.js"></script>
+    <script src="assets/js/aboutMosaic.js"></script>
+  </body>
 </html>
