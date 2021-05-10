@@ -1,5 +1,5 @@
 :root {
-  --black: #0d0d0d;
+  --black: #000000;
   --white: #f2f2f2;
   --grey: #a6a6a6;
   --dark-theme-pink: #f20574;
@@ -20,7 +20,7 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
   color: var(--white);
-  background: var(--black) url(../images/stars.jpg);
+  background: var(--black);
   overflow-x: hidden;
   padding-bottom: 50px;
 }
@@ -95,13 +95,14 @@ a:visited {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url('../images/raimond-klavins-90l3v-CX11Y-unsplash.jpg');
+  background-image: url('../images/hero-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 1280px;
+  height: 100%;
+  max-height: 1280px;
 }
 
 .hero__titles {
@@ -131,38 +132,31 @@ a:visited {
 
 .abouttrigger {
   position: relative;
-  top: 50px;
+  top: -10px;
 }
 
 .about {
-  /* display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; */
-  margin: 200px auto 75px;
+  margin: 0 auto 25px;
   padding: 0 50px;
+  height: 1280px;
 }
 
 .about__overlay {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url('../images/prometey-sanchez-noskov-c6M7AoevSXE-unsplash\ \(1\).jpg');
+  background-image: url('../images/about-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 1280px;
+  height: 100%;
+  max-height: 1280px;
 }
 
 .about__description {
-  /* -webkit-box-flex: 1;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%; */
   width: 60%;
-  /* margin-bottom: 100px; */
   margin-left: 250px;
   position: relative;
 }
@@ -223,8 +217,6 @@ a:visited {
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: mosaic1;
-  /* opacity: 0; */
-  /* animation: mosaic1 1.5s 1.25s forwards; */
   position: relative;
   left: 60px;
 }
@@ -234,8 +226,6 @@ a:visited {
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
   grid-area: mosaic2;
-  /* opacity: 0; */
-  /* animation: mosaic2 1.5s 1.25s forwards; */
 }
 
 .mosaic3 {
@@ -243,8 +233,6 @@ a:visited {
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: mosaic3;
-  /* opacity: 0; */
-  /* animation: mosaic3 1.5s 1.25s forwards; */
   position: relative;
   top: 60px;
 }
@@ -255,32 +243,24 @@ a:visited {
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: mosaic-center;
-  /* opacity: 0; */
-  /* animation: mosaic-center 1.5s 1.25s forwards; */
 }
 
 .mosaic4 {
   -ms-grid-row: 7;
   -ms-grid-column: 3;
   grid-area: mosaic4;
-  /* opacity: 0; */
-  /* animation: mosaic4 1.5s 1.25s forwards; */
 }
 
 .mosaic5 {
   -ms-grid-row: 7;
   -ms-grid-column: 5;
   grid-area: mosaic5;
-  /* opacity: 0; */
-  /* animation: mosaic5 1.5s 1.25s forwards; */
 }
 
 .mosaic6 {
   -ms-grid-row: 7;
   -ms-grid-column: 7;
   grid-area: mosaic6;
-  /* opacity: 0; */
-  /* animation: mosaic6 1.5s 1.25s forwards; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,98 +276,26 @@ a:visited {
   color: var(--dark-theme-gold);
 }
 
-/* @keyframes mosaic1 {
-  from {
-    transform: translate(0, -100px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic2 {
-  from {
-    transform: translate(100px, -100px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic3 {
-  from {
-    transform: translate(-100px, 0px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic-center {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic4 {
-  from {
-    transform: translate(-100px, 100px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic5 {
-  from {
-    transform: translate(0px, 100px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes mosaic6 {
-  from {
-    transform: translate(100px, 100px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-} */
-
 /* Projects Section */
 
 .projects {
-  margin: 500px 0;
+  margin: 0;
   position: relative;
+  height: 1280px;
 }
 
 .projects__overlay {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url('../images/v2osk-JE01L3hB0GQ-unsplash\ -\ Copy.jpg');
+  background-image: url('../images/projects-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  height: 100%;
+  max-height: 1280px;
 }
 
 .projects__title {
