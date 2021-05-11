@@ -18,7 +18,7 @@
 
 html {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   color: var(--white);
   background: var(--black);
   overflow-x: hidden;
@@ -190,10 +190,10 @@ button:hover {
     'mosaic3 mosaic-center mosaic-center mosaic2'
     'mosaic3 mosaic-center mosaic-center mosaic2'
     '. mosaic4 mosaic5 mosaic6';
-  -ms-grid-rows: auto 15px auto 15px auto;
-  grid-template-rows: repeat(4, 100px);
-  -ms-grid-columns: 100px 15px 100px 15px 100px 15px 100px;
-  grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: 125px 15px 125px 15px 125px 15px 125px;
+  grid-template-rows: repeat(4, 125px);
+  -ms-grid-columns: 125px 15px 125px 15px 125px 15px 125px;
+  grid-template-columns: repeat(4, 125px);
   grid-gap: 15px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -331,7 +331,7 @@ button:hover {
 .project__description {
   overflow: hidden;
   padding: 20px 0 40px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .project__title span,
@@ -384,6 +384,7 @@ button:hover {
 .project__animation5,
 .project__animation6 {
   width: 450px;
+  position: relative;
 }
 
 .slick-active .project__animation1 {
@@ -392,15 +393,15 @@ button:hover {
   animation-duration: 1s;
   left: 100px;
   top: 0;
-  z-index: 10;
+  z-index: 8;
   opacity: 1;
 }
 
 .slick-active .project__animation2 {
   animation-name: projectanimation2;
   animation-duration: 2s;
-  left: 380px;
-  top: 60px;
+  left: 320px;
+  top: -200px;
   z-index: 8;
   opacity: 1;
 }
@@ -419,7 +420,7 @@ button:hover {
   animation-name: projectanimation4;
   animation-duration: 2s;
   left: 320px;
-  top: 340px;
+  top: -200px;
   z-index: 8;
   opacity: 1;
 }
@@ -438,7 +439,7 @@ button:hover {
   animation-name: projectanimation6;
   animation-duration: 2s;
   left: 320px;
-  top: 340px;
+  top: -200px;
   z-index: 8;
   opacity: 1;
 }
@@ -456,15 +457,11 @@ button:hover {
 
 @keyframes projectanimation2 {
   0% {
-    left: 280px;
-    opacity: 0;
-  }
-  50% {
-    left: 280px;
+    left: 220px;
     opacity: 0;
   }
   100% {
-    left: 380px;
+    left: 320px;
     opacity: 1;
   }
 }
@@ -482,11 +479,11 @@ button:hover {
 
 @keyframes projectanimation4 {
   0% {
-    top: 400px;
+    top: 0;
     opacity: 0;
   }
   100% {
-    top: 340px;
+    top: -200px;
     opacity: 1;
   }
 }
@@ -504,11 +501,11 @@ button:hover {
 
 @keyframes projectanimation6 {
   0% {
-    top: 200px;
+    top: -100px;
     opacity: 0;
   }
   100% {
-    top: 340px;
+    top: -200px;
     opacity: 1;
   }
 }
@@ -518,6 +515,10 @@ button:hover {
 .footer {
   margin: 50px 0 0;
   text-align: center;
+}
+
+.footer p {
+  font-size: 1rem;
 }
 
 .footer a {
@@ -546,8 +547,17 @@ button:hover {
 
 /* Media Queries */
 
-@media (max-width: 600px) {
-  .contact__form {
-    grid-template-areas: 'name name' 'email email' 'message message';
+@media (max-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero__overlay,
+  .about__overlay,
+  .projects__overlay {
+    height: auto;
+    background-size: contain;
   }
 }
