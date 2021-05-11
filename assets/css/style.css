@@ -547,17 +547,17 @@ button:hover {
 
 /* Media Queries */
 
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   html {
     font-size: 20px;
   }
-}
+} */
 
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .hero__overlay,
   .about__overlay,
   .projects__overlay {
     height: auto;
     background-size: contain;
   }
-}
+} */
