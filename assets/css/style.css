@@ -52,19 +52,22 @@ a:visited {
 button {
   padding: 10px 30px;
   margin-top: 50px;
-  border: none;
   background: var(--dark-theme-gold);
   font-size: 0.75rem;
   font-weight: 800;
   color: var(--black);
   outline: none;
+  border: 6px solid var(--black);
+  box-shadow: 0 0 0 0px var(--white), 0 0 0 3px var(--dark-theme-gold);
 }
 
 button:hover {
-  background: -o-linear-gradient(75deg, var(--dark-theme-gold), var(--black));
-  background: linear-gradient(15deg, var(--dark-theme-gold), var(--black));
-  color: var(--white);
   cursor: pointer;
+  color: var(--white);
+  border: 6px solid var(--white);
+  background: var(--dark-theme-gold);
+  box-shadow: 0 0 5px var(--dark-theme-gold), 0 0 18px var(--dark-theme-gold), 0 0 36px var(--dark-theme-gold);
+  transition: 0.5s;
 }
 
 /* Hero Section */
@@ -288,7 +291,7 @@ button:hover {
   max-height: 1280px;
 }
 
-.projects__title {
+.projects__section__title {
   position: relative;
   text-align: right;
   margin: 0 16vw 75px auto;
@@ -408,144 +411,145 @@ button:hover {
   }
 }
 
-/* Portfolio List Page */
-.portfolio-list-slider {
-  width: 1300px;
-  margin: 200px auto;
-  position: relative;
+/* Projects Slider */
+.projects__slider {
+  width: 90%;
+  margin: 200px auto 0;
 }
 
 .flexing {
   display: flex !important;
-  height: 600px;
+  height: 800px;
   outline: none;
 }
 
-.left-side {
+.project__left__half {
   width: 40%;
+  padding-left: 30px;
 }
 
-.portfolio-list-title {
+.project__right__half {
+  width: 60%;
+  position: relative;
+}
+
+.project__title {
   overflow: hidden;
   font-size: 32px;
   font-weight: 800;
   color: var(--dark-theme-gold);
 }
-.portfolio-list-description {
+
+.project__description {
   overflow: hidden;
   padding: 20px 0 40px;
   font-size: 20px;
 }
-.portfolio-list-title span,
-.portfolio-list-description span {
+
+.project__title span,
+.project__description span {
   display: block;
   transition-delay: 4s;
-  transition: transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.75s ease-in-out;
   transform: translateY(105%) translateZ(0);
 }
-.slick-active .portfolio-list-title span,
-.slick-active .portfolio-list-description span {
+
+.slick-active .project__title span,
+.slick-active .project__description span {
   transform: none;
 }
 
-.right-side {
-  width: 60%;
-  position: relative;
-}
-
 .slick-dots {
+  display: flex;
   position: absolute;
-  left: -100px;
-  top: 0;
   list-style-type: none;
+  top: -150px;
+  left: 15px;
 }
 
 .slick-dots li button {
   font-size: 22px;
   font-weight: 800;
   padding: 10px 15px;
-  border: none;
+  border: 3px solid var(--dark-theme-gold);
+  box-shadow: none;
   background: none;
   cursor: pointer;
   outline: none;
   color: white;
-  width: 100px;
-  text-align: right;
-  position: relative;
-  right: 55px;
   margin-top: 0;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  margin: 0 10px;
 }
 
 .slick-dots .slick-active button {
+  background-color: var(--dark-theme-gold);
   color: var(--black);
-  background: var(--dark-theme-gold);
-  width: 100px;
-  text-align: right;
-  position: relative;
-  right: 55px;
 }
 
-.image1,
-.image2,
-.image3,
-.image4,
-.image5,
-.image6 {
-  width: 300px;
+.project__animation1,
+.project__animation2,
+.project__animation3,
+.project__animation4,
+.project__animation5,
+.project__animation6 {
+  width: 500px;
   position: absolute;
 }
-.slick-active .image1 {
-  width: 400px;
-  animation-name: animation1;
+.slick-active .project__animation1 {
+  width: 550px;
+  animation-name: projectanimation1;
   animation-duration: 1s;
   left: 100px;
   top: 0;
   z-index: 10;
   opacity: 1;
 }
-.slick-active .image2 {
-  animation-name: animation2;
+.slick-active .project__animation2 {
+  animation-name: projectanimation2;
   animation-duration: 2s;
   left: 380px;
-  top: 68px;
+  top: 60px;
   z-index: 8;
   opacity: 1;
 }
-.slick-active .image3 {
-  width: 400px;
-  animation-name: animation3;
+.slick-active .project__animation3 {
+  width: 550px;
+  animation-name: projectanimation3;
   animation-duration: 2s;
   left: 100px;
   top: 0;
   z-index: 8;
   opacity: 1;
 }
-.slick-active .image4 {
-  animation-name: animation4;
+.slick-active .project__animation4 {
+  animation-name: projectanimation4;
   animation-duration: 2s;
   left: 320px;
-  top: 320px;
+  top: 340px;
   z-index: 8;
   opacity: 1;
 }
-.slick-active .image5 {
-  width: 400px;
-  animation-name: animation5;
+.slick-active .project__animation5 {
+  width: 550px;
+  animation-name: projectanimation5;
   animation-duration: 2s;
   left: 100px;
   top: 0;
   z-index: 8;
   opacity: 1;
 }
-.slick-active .image6 {
-  animation-name: animation6;
+.slick-active .project__animation6 {
+  animation-name: projectanimation6;
   animation-duration: 2s;
   left: 320px;
-  top: 320px;
+  top: 340px;
   z-index: 8;
   opacity: 1;
 }
-@keyframes animation1 {
+@keyframes projectanimation1 {
   0% {
     top: 100px;
     opacity: 0;
@@ -555,7 +559,7 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes animation2 {
+@keyframes projectanimation2 {
   0% {
     left: 280px;
     opacity: 0;
@@ -569,9 +573,9 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes animation3 {
+@keyframes projectanimation3 {
   0% {
-    left: 0px;
+    left: 0;
     opacity: 0;
   }
   100% {
@@ -579,17 +583,17 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes animation4 {
+@keyframes projectanimation4 {
   0% {
     top: 400px;
     opacity: 0;
   }
   100% {
-    top: 320px;
+    top: 340px;
     opacity: 1;
   }
 }
-@keyframes animation5 {
+@keyframes projectanimation5 {
   0% {
     left: 200px;
     opacity: 0;
@@ -599,13 +603,13 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes animation6 {
+@keyframes projectanimation6 {
   0% {
     top: 200px;
     opacity: 0;
   }
   100% {
-    top: 320px;
+    top: 340px;
     opacity: 1;
   }
 }

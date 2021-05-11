@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.portfolio-list-slider').slick({
+  $('.projects__slider').slick({
     arrows: false,
     dots: true,
     fade: true
