@@ -173,7 +173,7 @@ button:hover {
 
 .about__overlay__tablet,
 .about__overlay__mobile,
-.about__overlay_xs {
+.about__overlay__xs {
   display: none;
 }
 
