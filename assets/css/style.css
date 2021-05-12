@@ -1091,3 +1091,16 @@ button:hover {
     grid-template-columns: repeat(4, 75px);
   }
 }
+
+@media (max-width: 414px) {
+  .hero__overlay {
+    background-attachment: scroll;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .about__overlay__xs {
+    background-attachment: scroll;
+    background-size: contain;
+  }
+}
