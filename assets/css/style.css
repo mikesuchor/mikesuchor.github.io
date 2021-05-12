@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
   --black: #000000;
   --white: #f2f2f2;
@@ -58,6 +65,7 @@ button {
   color: var(--black);
   outline: none;
   border: 6px solid var(--black);
+  -webkit-box-shadow: 0 0 0 0px var(--white), 0 0 0 3px var(--dark-theme-gold);
   box-shadow: 0 0 0 0px var(--white), 0 0 0 3px var(--dark-theme-gold);
 }
 
@@ -66,7 +74,10 @@ button:hover {
   color: var(--white);
   border: 6px solid var(--white);
   background: var(--dark-theme-gold);
+  -webkit-box-shadow: 0 0 5px var(--dark-theme-gold), 0 0 18px var(--dark-theme-gold), 0 0 36px var(--dark-theme-gold);
   box-shadow: 0 0 5px var(--dark-theme-gold), 0 0 18px var(--dark-theme-gold), 0 0 36px var(--dark-theme-gold);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -99,6 +110,7 @@ button:hover {
 }
 
 .hero {
+  position: relative;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -106,9 +118,6 @@ button:hover {
 }
 
 .hero__overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
   background-image: url('../images/hero-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
@@ -116,10 +125,11 @@ button:hover {
   background-size: cover;
   width: 100%;
   height: 100%;
-  max-height: 1280px;
+  max-height: 100vh;
 }
 
 .hero__title__block {
+  position: absolute;
 }
 
 .hero__title {
@@ -143,21 +153,12 @@ button:hover {
 
 /* About Section */
 
-.abouttrigger {
-  position: relative;
-  top: -10px;
-}
-
 .about {
+  position: relative;
   margin: 0 auto 25px;
-  padding: 0 50px;
-  height: 1280px;
 }
 
 .about__overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
   background-image: url('../images/about-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
@@ -165,13 +166,13 @@ button:hover {
   background-size: cover;
   width: 100%;
   height: 100%;
-  max-height: 1280px;
 }
 
 .about__description {
-  width: 60%;
-  margin-left: 14vw;
-  position: relative;
+  position: absolute;
+  top: 0;
+  width: 55%;
+  margin-left: 15vw;
 }
 
 .about__description p {
@@ -180,6 +181,9 @@ button:hover {
 }
 
 .about__mosaic {
+  position: absolute;
+  top: 350px;
+  margin-left: 30vw;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
@@ -198,7 +202,6 @@ button:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: -68px;
 }
 
 .about__mosaic img {
@@ -277,7 +280,6 @@ button:hover {
 .projects {
   margin: 0;
   position: relative;
-  height: 1280px;
 }
 
 .projects__overlay {
@@ -291,7 +293,6 @@ button:hover {
   background-size: cover;
   width: 100%;
   height: 100%;
-  max-height: 1280px;
 }
 
 .projects__section__title {
@@ -307,6 +308,8 @@ button:hover {
 }
 
 .flexing {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
   height: 800px;
   outline: none;
@@ -337,17 +340,28 @@ button:hover {
 .project__title span,
 .project__description span {
   display: block;
+  -webkit-transition-delay: 4s;
+  -o-transition-delay: 4s;
   transition-delay: 4s;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  -o-transition: transform 0.75s ease-in-out;
   transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+  -webkit-transform: translateY(105%) translateZ(0);
   transform: translateY(105%) translateZ(0);
 }
 
 .slick-active .project__title span,
 .slick-active .project__description span {
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
 .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   list-style-type: none;
@@ -360,6 +374,7 @@ button:hover {
   font-weight: 800;
   padding: 10px 15px;
   border: 3px solid var(--dark-theme-gold);
+  -webkit-box-shadow: none;
   box-shadow: none;
   background: none;
   cursor: pointer;
@@ -389,7 +404,9 @@ button:hover {
 
 .slick-active .project__animation1 {
   width: 500px;
+  -webkit-animation-name: projectanimation1;
   animation-name: projectanimation1;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
   left: 100px;
   top: 0;
@@ -398,7 +415,9 @@ button:hover {
 }
 
 .slick-active .project__animation2 {
+  -webkit-animation-name: projectanimation2;
   animation-name: projectanimation2;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 320px;
   top: -200px;
@@ -408,7 +427,9 @@ button:hover {
 
 .slick-active .project__animation3 {
   width: 500px;
+  -webkit-animation-name: projectanimation3;
   animation-name: projectanimation3;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 100px;
   top: 0;
@@ -417,7 +438,9 @@ button:hover {
 }
 
 .slick-active .project__animation4 {
+  -webkit-animation-name: projectanimation4;
   animation-name: projectanimation4;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 320px;
   top: -200px;
@@ -427,7 +450,9 @@ button:hover {
 
 .slick-active .project__animation5 {
   width: 500px;
+  -webkit-animation-name: projectanimation5;
   animation-name: projectanimation5;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 100px;
   top: 0;
@@ -436,12 +461,25 @@ button:hover {
 }
 
 .slick-active .project__animation6 {
+  -webkit-animation-name: projectanimation6;
   animation-name: projectanimation6;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   left: 320px;
   top: -200px;
   z-index: 8;
   opacity: 1;
+}
+
+@-webkit-keyframes projectanimation1 {
+  0% {
+    top: 100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes projectanimation1 {
@@ -451,6 +489,17 @@ button:hover {
   }
   100% {
     top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes projectanimation2 {
+  0% {
+    left: 220px;
+    opacity: 0;
+  }
+  100% {
+    left: 320px;
     opacity: 1;
   }
 }
@@ -466,6 +515,17 @@ button:hover {
   }
 }
 
+@-webkit-keyframes projectanimation3 {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 100px;
+    opacity: 1;
+  }
+}
+
 @keyframes projectanimation3 {
   0% {
     left: 0;
@@ -473,6 +533,17 @@ button:hover {
   }
   100% {
     left: 100px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes projectanimation4 {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: -200px;
     opacity: 1;
   }
 }
@@ -488,6 +559,17 @@ button:hover {
   }
 }
 
+@-webkit-keyframes projectanimation5 {
+  0% {
+    left: 200px;
+    opacity: 0;
+  }
+  100% {
+    left: 100px;
+    opacity: 1;
+  }
+}
+
 @keyframes projectanimation5 {
   0% {
     left: 200px;
@@ -495,6 +577,17 @@ button:hover {
   }
   100% {
     left: 100px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes projectanimation6 {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: -200px;
     opacity: 1;
   }
 }
@@ -547,17 +640,16 @@ button:hover {
 
 /* Media Queries */
 
-/* @media (max-width: 1500px) {
+@media (max-width: 1500px) {
   html {
     font-size: 20px;
   }
-} */
+}
 
-/* @media (max-width: 1440px) {
+@media (max-width: 1440px) {
   .hero__overlay,
   .about__overlay,
   .projects__overlay {
     height: auto;
-    background-size: contain;
   }
-} */
+}
