@@ -133,7 +133,7 @@ button:hover {
 }
 
 .hero__title {
-  padding: 2vh;
+  padding: 20px;
   border-top: 4px solid var(--white);
   border-bottom: 4px solid var(--white);
   opacity: 0;
@@ -576,12 +576,11 @@ button:hover {
 .project__animation4,
 .project__animation5,
 .project__animation6 {
-  width: 450px;
+  width: 400px;
   position: relative;
 }
 
 .slick-active .project__animation1 {
-  width: 500px;
   -webkit-animation-name: projectanimation1;
   animation-name: projectanimation1;
   -webkit-animation-duration: 1s;
@@ -604,11 +603,10 @@ button:hover {
 }
 
 .slick-active .project__animation3 {
-  width: 500px;
   -webkit-animation-name: projectanimation3;
   animation-name: projectanimation3;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   left: 100px;
   top: 0;
   z-index: 8;
@@ -627,11 +625,10 @@ button:hover {
 }
 
 .slick-active .project__animation5 {
-  width: 500px;
   -webkit-animation-name: projectanimation5;
   animation-name: projectanimation5;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
   left: 100px;
   top: 0;
   z-index: 8;
@@ -717,7 +714,7 @@ button:hover {
 
 @-webkit-keyframes projectanimation4 {
   0% {
-    top: 0;
+    top: -250px;
     opacity: 0;
   }
   100% {
@@ -728,7 +725,7 @@ button:hover {
 
 @keyframes projectanimation4 {
   0% {
-    top: 0;
+    top: -250px;
     opacity: 0;
   }
   100% {
@@ -761,7 +758,7 @@ button:hover {
 
 @-webkit-keyframes projectanimation6 {
   0% {
-    top: -100px;
+    top: -150px;
     opacity: 0;
   }
   100% {
@@ -772,7 +769,7 @@ button:hover {
 
 @keyframes projectanimation6 {
   0% {
-    top: -100px;
+    top: -150px;
     opacity: 0;
   }
   100% {
@@ -839,6 +836,9 @@ button:hover {
     -ms-grid-columns: 250px 15px 200px 15px 200px 15px 200px;
     grid-template-columns: repeat(4, 200px);
   }
+  .project__right__half {
+    padding-left: 150px;
+  }
 }
 
 @media (min-width: 2125px) {
@@ -855,6 +855,40 @@ button:hover {
     grid-template-rows: repeat(4, 100px);
     grid-template-columns: repeat(4, 100px);
   }
+  .project__animation1,
+  .project__animation2,
+  .project__animation3,
+  .project__animation4,
+  .project__animation5,
+  .project__animation6 {
+    width: 350px;
+  }
+  .slick-active .project__animation2,
+  .slick-active .project__animation4,
+  .slick-active .project__animation6 {
+    left: 250px;
+  }
+  @-webkit-keyframes projectanimation2 {
+    0% {
+      left: 125px;
+      opacity: 0;
+    }
+    100% {
+      left: 250px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes projectanimation2 {
+    0% {
+      left: 125px;
+      opacity: 0;
+    }
+    100% {
+      left: 250px;
+      opacity: 1;
+    }
+  }
 }
 
 @media (max-width: 1540px) {
@@ -863,7 +897,6 @@ button:hover {
     grid-template-rows: repeat(4, 80px);
     grid-template-columns: repeat(4, 80px);
   }
-
   .mosaic6 i {
     font-size: 36px;
   }
@@ -875,6 +908,86 @@ button:hover {
     margin-left: 36vw;
     grid-template-rows: repeat(4, 80px);
     grid-template-columns: repeat(4, 80px);
+  }
+  .project__animation1,
+  .project__animation2,
+  .project__animation3,
+  .project__animation4,
+  .project__animation5,
+  .project__animation6 {
+    width: 300px;
+  }
+  .slick-active .project__animation2,
+  .slick-active .project__animation4,
+  .slick-active .project__animation6 {
+    top: -125px;
+    left: 200px;
+  }
+
+  @-webkit-keyframes projectanimation2 {
+    0% {
+      left: 125px;
+      opacity: 0;
+    }
+    100% {
+      left: 200px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes projectanimation2 {
+    0% {
+      left: 125px;
+      opacity: 0;
+    }
+    100% {
+      left: 200px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes projectanimation4 {
+    0% {
+      top: -200px;
+      opacity: 0;
+    }
+    100% {
+      top: -125px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes projectanimation4 {
+    0% {
+      top: -200px;
+      opacity: 0;
+    }
+    100% {
+      top: -125px;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes projectanimation6 {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    100% {
+      top: -125px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes projectanimation6 {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    100% {
+      top: -125px;
+      opacity: 1;
+    }
   }
 }
 
@@ -892,6 +1005,13 @@ button:hover {
 }
 
 @media (max-width: 1200px) {
+  .hero__title {
+    padding: 10px 0;
+    font-size: 4.5vw;
+  }
+  .hero__subtitle {
+    font-size: 2.5vw;
+  }
   .about__overlay {
     display: none;
   }
@@ -906,37 +1026,65 @@ button:hover {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1050px) {
   .about__overlay__tablet {
     display: none;
   }
   .about__overlay__mobile {
     display: block;
   }
-  .about__mosaic {
-    top: 480px;
-    margin-left: 20vw;
-    grid-template-rows: repeat(4, 85px);
-    grid-template-columns: repeat(4, 85px);
+}
+
+@media (max-width: 1150px) {
+  .project__animation1,
+  .project__animation2,
+  .project__animation3,
+  .project__animation4,
+  .project__animation5,
+  .project__animation6 {
+    width: 300px;
   }
 }
 
 @media (max-width: 750px) {
-  .about__mosaic {
-    top: 600px;
-    margin-left: 18vw;
-    grid-template-rows: repeat(4, 65px);
-    grid-template-columns: repeat(4, 65px);
-  }
   .about__overlay__mobile {
     display: none;
   }
   .about__overlay__xs {
     display: block;
   }
+  .about__mosaic {
+    top: 600px;
+    margin-left: 18vw;
+    grid-template-rows: repeat(4, 65px);
+    grid-template-columns: repeat(4, 65px);
+  }
 }
 
 @media (max-width: 650px) {
+  .hero__title__block {
+    padding-right: 45px;
+  }
+  .about__mosaic {
+    margin: -150px auto 200px;
+    grid-template-rows: repeat(4, 75px);
+    grid-template-columns: repeat(4, 75px);
+    position: static;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero__title__block {
+    padding-right: 15px;
+  }
+  .hero__title {
+    font-size: 1.5rem;
+    border: none;
+  }
+  .hero__subtitle {
+    font-size: 0.75rem;
+    margin-top: 0;
+  }
   .about__mosaic {
     margin-left: 18vw;
     grid-template-rows: repeat(4, 75px);
