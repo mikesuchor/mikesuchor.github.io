@@ -1101,6 +1101,10 @@ button:hover {
   }
   .about__overlay__xs {
     background-attachment: scroll;
-    background-size: contain;
+    background-size: cover;
+  }
+  .projects__overlay {
+    background-attachment: scroll;
+    background-size: cover;
   }
 }
