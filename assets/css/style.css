@@ -822,9 +822,7 @@ button:hover {
 }
 
 @media (max-width: 1440px) {
-  .hero__overlay,
-  .about__overlay,
-  .projects__overlay {
+  .hero__overlay {
     height: auto;
   }
 }
@@ -1026,6 +1024,17 @@ button:hover {
   }
 }
 
+@media (max-width: 1150px) {
+  .project__animation1,
+  .project__animation2,
+  .project__animation3,
+  .project__animation4,
+  .project__animation5,
+  .project__animation6 {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1050px) {
   .about__overlay__tablet {
     display: none;
@@ -1035,14 +1044,16 @@ button:hover {
   }
 }
 
-@media (max-width: 1150px) {
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
-    width: 300px;
+@media (max-width: 960px) {
+  .flexing {
+    flex-direction: column;
+  }
+  .project__left__half,
+  .project__right__half {
+    width: 80%;
+  }
+  .project__left__half {
+    padding-bottom: 100px;
   }
 }
 
