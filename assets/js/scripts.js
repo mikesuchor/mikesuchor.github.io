@@ -1,5 +1,14 @@
 $(document).ready(() => {
   centerHeroText();
+
+  const aboutTrigger = $('.abouttrigger').offset();
+  const aboutMosaicImages = $('.about__mosaic');
+
+  $(window).scroll(() => {
+    if ($(window).scrollTop() >= aboutTrigger.top - 300) {
+      aboutMosaicImages.children().addClass('animated');
+    }
+  });
 });
 
 $(window).resize(() => {
