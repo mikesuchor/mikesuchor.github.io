@@ -158,7 +158,9 @@ button:hover {
   margin: 0 auto 25px;
 }
 
-.about__overlay {
+.about__overlay,
+.about__overlay__tablet,
+.about__overlay__mobile {
   background-image: url('../images/about-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
@@ -166,6 +168,11 @@ button:hover {
   background-size: cover;
   width: 100%;
   height: 100%;
+}
+
+.about__overlay__tablet,
+.about__overlay__mobile {
+  display: none;
 }
 
 .about__description {
@@ -878,5 +885,48 @@ button:hover {
 
   .mosaic6 i {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about__overlay {
+    display: none;
+  }
+  .about__overlay__tablet {
+    display: block;
+  }
+  .about__mosaic {
+    top: 480px;
+    margin-left: 20vw;
+    grid-template-rows: repeat(4, 85px);
+    grid-template-columns: repeat(4, 85px);
+  }
+}
+
+@media (max-width: 1050px) {
+  .about__mosaic {
+    margin-left: 22vw;
+    grid-template-rows: repeat(4, 60px);
+    grid-template-columns: repeat(4, 60px);
+  }
+  .about__overlay__tablet {
+    display: none;
+  }
+  .about__overlay__mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 650px) {
+  .about__mosaic {
+    margin-left: 22vw;
+    grid-template-rows: repeat(4, 60px);
+    grid-template-columns: repeat(4, 60px);
+  }
+  .about__overlay__tablet {
+    display: none;
+  }
+  .about__overlay__mobile {
+    display: block;
   }
 }
