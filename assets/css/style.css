@@ -160,7 +160,8 @@ button:hover {
 
 .about__overlay,
 .about__overlay__tablet,
-.about__overlay__mobile {
+.about__overlay__mobile,
+.about__overlay__xs {
   background-image: url('../images/about-section-bg.jpg');
   background-attachment: fixed;
   background-position: top;
@@ -171,7 +172,8 @@ button:hover {
 }
 
 .about__overlay__tablet,
-.about__overlay__mobile {
+.about__overlay__mobile,
+.about__overlay_xs {
   display: none;
 }
 
@@ -565,6 +567,7 @@ button:hover {
 .slick-dots .slick-active button {
   background-color: var(--dark-theme-gold);
   color: var(--black);
+  background-image: url(../images/miamiseal.png);
 }
 
 .project__animation1,
@@ -903,30 +906,40 @@ button:hover {
   }
 }
 
-@media (max-width: 1050px) {
-  .about__mosaic {
-    margin-left: 22vw;
-    grid-template-rows: repeat(4, 60px);
-    grid-template-columns: repeat(4, 60px);
-  }
+@media (max-width: 1200px) {
   .about__overlay__tablet {
     display: none;
   }
   .about__overlay__mobile {
+    display: block;
+  }
+  .about__mosaic {
+    top: 480px;
+    margin-left: 20vw;
+    grid-template-rows: repeat(4, 85px);
+    grid-template-columns: repeat(4, 85px);
+  }
+}
+
+@media (max-width: 750px) {
+  .about__mosaic {
+    top: 600px;
+    margin-left: 18vw;
+    grid-template-rows: repeat(4, 65px);
+    grid-template-columns: repeat(4, 65px);
+  }
+  .about__overlay__mobile {
+    display: none;
+  }
+  .about__overlay__xs {
     display: block;
   }
 }
 
 @media (max-width: 650px) {
   .about__mosaic {
-    margin-left: 22vw;
-    grid-template-rows: repeat(4, 60px);
-    grid-template-columns: repeat(4, 60px);
-  }
-  .about__overlay__tablet {
-    display: none;
-  }
-  .about__overlay__mobile {
-    display: block;
+    margin-left: 18vw;
+    grid-template-rows: repeat(4, 75px);
+    grid-template-columns: repeat(4, 75px);
   }
 }
