@@ -1,14 +1,28 @@
 $(document).ready(() => {
   centerHeroText();
 
-  const aboutTrigger = $('.abouttrigger').offset();
-  const aboutMosaicImages = $('.about__mosaic');
+  const aboutMosaic = $('.about__mosaic');
+  const projectsImages = $('.project__right__half');
 
-  $(window).scroll(() => {
-    if ($(window).scrollTop() >= aboutTrigger.top - 300) {
-      aboutMosaicImages.children().addClass('animated');
+  const aboutMosaicObserver = new IntersectionObserver((entry) => {
+    console.log(entry[0].intersectionRatio);
+    if (entry[0].intersectionRatio > 0) {
+      aboutMosaic.children().addClass('animated');
+    } else {
+      aboutMosaic.children().removeClass('animated');
     }
   });
+
+  const projectsSliderObserver = new IntersectionObserver((entry) => {
+    if (entry[0].intersectionRatio > 0) {
+      projectsImages.children().addClass('animated');
+    } else {
+      projectsImages.children().removeClass('animated');
+    }
+  });
+
+  aboutMosaicObserver.observe(aboutMosaic[0]);
+  projectsSliderObserver.observe(projectsImages[0]);
 });
 
 $(window).resize(() => {

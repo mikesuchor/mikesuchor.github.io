@@ -8,12 +8,7 @@
 :root {
   --black: #000000;
   --white: #f2f2f2;
-  --grey: #a6a6a6;
-  --dark-theme-pink: #f20574;
-  --dark-theme-yellow: #f2ce16;
   --dark-theme-gold: #f2a30f;
-  --dark-theme-light-blue: #04adbf;
-  --dark-theme-medium-blue: #0367a6;
 }
 
 * {
@@ -47,6 +42,7 @@ h3 {
 }
 
 p {
+  font-weight: 400;
   font-size: 0.6rem;
 }
 
@@ -594,7 +590,7 @@ button:hover {
   top: -200px;
 }
 
-.slick-active .project__animation1 {
+.slick-active .project__animation1.animated {
   -webkit-animation-name: projectanimation1;
   animation-name: projectanimation1;
   -webkit-animation-duration: 2s;
@@ -605,7 +601,7 @@ button:hover {
   opacity: 1;
 }
 
-.slick-active .project__animation2 {
+.slick-active .project__animation2.animated {
   -webkit-animation-name: projectanimation2;
   animation-name: projectanimation2;
   -webkit-animation-duration: 2s;
@@ -616,7 +612,7 @@ button:hover {
   opacity: 1;
 }
 
-.slick-active .project__animation3 {
+.slick-active .project__animation3.animated {
   -webkit-animation-name: projectanimation3;
   animation-name: projectanimation3;
   -webkit-animation-duration: 2s;
@@ -627,7 +623,7 @@ button:hover {
   opacity: 1;
 }
 
-.slick-active .project__animation4 {
+.slick-active .project__animation4.animated {
   -webkit-animation-name: projectanimation4;
   animation-name: projectanimation4;
   -webkit-animation-duration: 2s;
@@ -638,7 +634,7 @@ button:hover {
   opacity: 1;
 }
 
-.slick-active .project__animation5 {
+.slick-active .project__animation5.animated {
   -webkit-animation-name: projectanimation5;
   animation-name: projectanimation5;
   -webkit-animation-duration: 2s;
@@ -649,7 +645,7 @@ button:hover {
   opacity: 1;
 }
 
-.slick-active .project__animation6 {
+.slick-active .project__animation6.animated {
   -webkit-animation-name: projectanimation6;
   animation-name: projectanimation6;
   -webkit-animation-duration: 2s;
@@ -1060,7 +1056,7 @@ button:hover {
 
 @media (max-width: 960px) {
   .flexing {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .project__left__half,
   .project__right__half {
