@@ -42,17 +42,18 @@ h3 {
 }
 
 p {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 0.6rem;
 }
 
 a,
 a:visited {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
-button {
+.double__border__button {
+  display: inline-block;
   padding: 10px 30px;
   margin-top: 50px;
   background: var(--dark-theme-gold);
@@ -65,7 +66,7 @@ button {
   box-shadow: 0 0 0 0px var(--white), 0 0 0 3px var(--dark-theme-gold);
 }
 
-button:hover {
+.double__border__button:hover {
   cursor: pointer;
   color: var(--white);
   border: 6px solid var(--white);
@@ -81,8 +82,8 @@ button:hover {
 
 @-webkit-keyframes hero {
   from {
-    -webkit-transform: translate(0, 10vh);
-    transform: translate(0, 10vh);
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
     opacity: 0;
   }
   to {
@@ -94,13 +95,31 @@ button:hover {
 
 @keyframes hero {
   from {
-    -webkit-transform: translate(0, 10vh);
-    transform: translate(0, 10vh);
+    -webkit-transform: translate(0, 50px);
+    transform: translate(0, 50px);
     opacity: 0;
   }
   to {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
@@ -139,12 +158,48 @@ button:hover {
 }
 
 .hero__subtitle {
-  margin-top: 2vh;
+  margin-top: 12px;
   opacity: 0;
   -webkit-animation: hero 1.5s 1.5s forwards;
   animation: hero 1.5s 1.5s forwards;
   letter-spacing: 0.225rem;
   text-shadow: 2px 2px black;
+}
+
+.hero__icons {
+  padding-top: 25px;
+}
+
+.hero__icons i {
+  background: black;
+  color: white;
+}
+
+.hero__icons .fa-github-square {
+  padding-right: 25px;
+  opacity: 0;
+  -webkit-animation: hero 1.5s 1.75s forwards;
+  animation: hero 1.5s 1.75s forwards;
+}
+
+.hero__icons .fa-linkedin {
+  opacity: 0;
+  -webkit-animation: hero 1.5s 2s forwards;
+  animation: hero 1.5s 2s forwards;
+}
+
+.hero__icons .fa-envelope-square {
+  padding-left: 25px;
+  opacity: 0;
+  -webkit-animation: hero 1.5s 2.25s forwards;
+  animation: hero 1.5s 2.25s forwards;
+}
+
+.fa-chevron-down {
+  padding-top: 75px;
+  opacity: 0;
+  -webkit-animation: fadein 1.5s 3.5s forwards;
+  animation: fadein 1.5s 3.5s forwards;
 }
 
 /* About Section */
@@ -198,7 +253,7 @@ button:hover {
     '. mosaic1 mosaic1 .'
     'mosaic3 mosaic-center mosaic-center mosaic2'
     'mosaic3 mosaic-center mosaic-center mosaic2'
-    '. mosaic4 mosaic5 mosaic6';
+    '. mosaic4 mosaic5 mosaic5';
   -ms-grid-rows: 125px 15px 125px 15px 125px 15px 125px;
   grid-template-rows: repeat(4, 125px);
   -ms-grid-columns: 125px 15px 125px 15px 125px 15px 125px;
@@ -250,6 +305,8 @@ button:hover {
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-area: mosaic-center;
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
   transform: scale(2);
 }
 
@@ -267,23 +324,11 @@ button:hover {
   opacity: 0;
 }
 
-.mosaic6 {
-  -ms-grid-row: 7;
-  -ms-grid-column: 7;
-  grid-area: mosaic6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  opacity: 0;
-}
-
 .mosaic1.animated {
   -webkit-animation-name: mosaic1;
   animation-name: mosaic1;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
@@ -296,8 +341,8 @@ button:hover {
 .mosaic2.animated {
   -webkit-animation-name: mosaic2;
   animation-name: mosaic2;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
@@ -308,8 +353,8 @@ button:hover {
 .mosaic3.animated {
   -webkit-animation-name: mosaic3;
   animation-name: mosaic3;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
@@ -322,16 +367,18 @@ button:hover {
 .mosaic-center.animated {
   -webkit-animation-name: mosaiccenter;
   animation-name: mosaiccenter;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .mosaic4.animated {
   -webkit-animation-name: mosaic4;
   animation-name: mosaic4;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -ms-grid-row: 7;
   -ms-grid-column: 3;
   grid-area: mosaic4;
@@ -341,37 +388,23 @@ button:hover {
 .mosaic5.animated {
   -webkit-animation-name: mosaic5;
   animation-name: mosaic5;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
   -ms-grid-row: 7;
   -ms-grid-column: 5;
   grid-area: mosaic5;
   opacity: 1;
 }
 
-.mosaic6.animated {
-  -webkit-animation-name: mosaic6;
-  animation-name: mosaic6;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
-  -ms-grid-row: 7;
-  -ms-grid-column: 7;
-  grid-area: mosaic6;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  opacity: 1;
-}
-
 @-webkit-keyframes mosaic1 {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.5) translate(0, -100px);
     transform: scale(1.5) translate(0, -100px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0);
     transform: scale(1) translate(0, 0);
   }
 }
@@ -379,10 +412,12 @@ button:hover {
 @-webkit-keyframes mosaic2 {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.5) translate(200px, -50px);
     transform: scale(1.5) translate(200px, -50px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0);
     transform: scale(1) translate(0, 0);
   }
 }
@@ -390,19 +425,23 @@ button:hover {
 @-webkit-keyframes mosaic3 {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.5) translate(-100px, -50px);
     transform: scale(1.5) translate(-100px, -50px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0);
     transform: scale(1) translate(0, 0);
   }
 }
 
 @-webkit-keyframes mosaiccenter {
   0% {
+    -webkit-transform: scale(2);
     transform: scale(2);
   }
   100% {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
@@ -410,10 +449,12 @@ button:hover {
 @-webkit-keyframes mosaic4 {
   0% {
     opacity: 0;
+    -webkit-transform: scale(1.5) translate(-75px, 150px);
     transform: scale(1.5) translate(-75px, 150px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0);
     transform: scale(1) translate(0, 0);
   }
 }
@@ -421,31 +462,37 @@ button:hover {
 @-webkit-keyframes mosaic5 {
   0% {
     opacity: 0;
-    transform: scale(1.5) translate(0px, 150px);
+    -webkit-transform: scale(1.5) translate(100px, 175px);
+    transform: scale(1.5) translate(100px, 175px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0);
     transform: scale(1) translate(0, 0);
   }
 }
 
-@-webkit-keyframes mosaic6 {
-  0% {
-    opacity: 0;
-    transform: scale(1.5) translate(100px, 100px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0);
-  }
-}
-
-.about__mosaic__icon {
+.social__media__icon {
   color: var(--white);
-  margin: 0 4px;
+  margin: 0;
 }
-.about__mosaic__icon:hover {
-  color: var(--dark-theme-gold);
+
+.social__media__icon:hover {
+}
+
+.fa-github-square {
+  color: #6f42c1;
+  background: var(--white);
+}
+
+.fa-linkedin {
+  color: #0077b5;
+  background: var(--white);
+}
+
+.fa-envelope-square {
+  color: var(--white);
+  background: red;
 }
 
 /* Projects Section */
@@ -488,12 +535,12 @@ button:hover {
   outline: none;
 }
 
-.project__left__half {
+.project__left__column {
   width: 40%;
   padding-left: 30px;
 }
 
-.project__right__half {
+.project__right__column {
   width: 60%;
 }
 
@@ -552,7 +599,7 @@ button:hover {
   background: none;
   cursor: pointer;
   outline: none;
-  color: white;
+  color: var(--white);
   margin-top: 0;
   width: 75px;
   height: 75px;
@@ -563,7 +610,6 @@ button:hover {
 .slick-dots .slick-active button {
   background-color: var(--dark-theme-gold);
   color: var(--black);
-  background-image: url(../images/miamiseal.png);
 }
 
 .project__animation1,
@@ -791,341 +837,13 @@ button:hover {
 /* Footer Section */
 
 .footer {
-  margin: 50px 0 0;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  margin: auto;
 }
 
 .footer p {
   font-size: 1rem;
-}
-
-.footer a {
-  -webkit-text-decoration: underline var(--white);
-  text-decoration: underline var(--white);
-}
-
-.footer a:hover {
-  color: var(--dark-theme-gold);
-  -webkit-text-decoration: underline var(--dark-theme-gold);
-  text-decoration: underline var(--dark-theme-gold);
-}
-
-.footer__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.footer__links a {
-  margin: 5px;
-}
-
-/* Media Queries */
-
-@media (max-width: 1500px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .hero__overlay {
-    height: auto;
-  }
-}
-
-@media (min-width: 2350px) {
-  .about__mosaic {
-    -ms-grid-rows: 200px 15px 200px 15px 200px 15px 200px;
-    grid-template-rows: repeat(4, 200px);
-    -ms-grid-columns: 250px 15px 200px 15px 200px 15px 200px;
-    grid-template-columns: repeat(4, 200px);
-  }
-  .project__right__half {
-    padding-left: 150px;
-  }
-}
-
-@media (min-width: 2125px) {
-  .about__mosaic {
-    -ms-grid-rows: 175px 15px 175px 15px 175px 15px 175px;
-    grid-template-rows: repeat(4, 175px);
-    -ms-grid-columns: 175px 15px 175px 15px 175px 15px 175px;
-    grid-template-columns: repeat(4, 175px);
-  }
-}
-
-@media (max-width: 1680px) {
-  .about__mosaic {
-    grid-template-rows: repeat(4, 100px);
-    grid-template-columns: repeat(4, 100px);
-  }
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
-    width: 350px;
-  }
-  .slick-active .project__animation2,
-  .slick-active .project__animation4,
-  .slick-active .project__animation6 {
-    left: 250px;
-  }
-  @-webkit-keyframes projectanimation2 {
-    0% {
-      left: 125px;
-      opacity: 0;
-    }
-    100% {
-      left: 250px;
-      opacity: 1;
-    }
-  }
-
-  @keyframes projectanimation2 {
-    0% {
-      left: 125px;
-      opacity: 0;
-    }
-    100% {
-      left: 250px;
-      opacity: 1;
-    }
-  }
-}
-
-@media (max-width: 1540px) {
-  .about__mosaic {
-    margin-left: 36vw;
-    grid-template-rows: repeat(4, 80px);
-    grid-template-columns: repeat(4, 80px);
-  }
-  .mosaic6 i {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .about__mosaic {
-    top: 300px;
-    margin-left: 36vw;
-    grid-template-rows: repeat(4, 80px);
-    grid-template-columns: repeat(4, 80px);
-  }
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
-    width: 300px;
-  }
-  .slick-active .project__animation2,
-  .slick-active .project__animation4,
-  .slick-active .project__animation6 {
-    top: -125px;
-    left: 200px;
-  }
-
-  @-webkit-keyframes projectanimation2 {
-    0% {
-      left: 125px;
-      opacity: 0;
-    }
-    100% {
-      left: 200px;
-      opacity: 1;
-    }
-  }
-
-  @keyframes projectanimation2 {
-    0% {
-      left: 125px;
-      opacity: 0;
-    }
-    100% {
-      left: 200px;
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes projectanimation4 {
-    0% {
-      top: -200px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
-
-  @keyframes projectanimation4 {
-    0% {
-      top: -200px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes projectanimation6 {
-    0% {
-      top: -50px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
-
-  @keyframes projectanimation6 {
-    0% {
-      top: -50px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
-}
-
-@media (max-width: 1300px) {
-  .about__mosaic {
-    top: 300px;
-    margin-left: 36vw;
-    grid-template-rows: repeat(4, 65px);
-    grid-template-columns: repeat(4, 65px);
-  }
-
-  .mosaic6 i {
-    font-size: 28px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .hero__title {
-    padding: 10px 0;
-    font-size: 4.5vw;
-  }
-  .hero__subtitle {
-    font-size: 2.5vw;
-  }
-  .about__overlay {
-    display: none;
-  }
-  .about__overlay__tablet {
-    display: block;
-  }
-  .about__mosaic {
-    top: 480px;
-    margin-left: 20vw;
-    grid-template-rows: repeat(4, 85px);
-    grid-template-columns: repeat(4, 85px);
-  }
-}
-
-@media (max-width: 1150px) {
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
-    width: 300px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .about__overlay__tablet {
-    display: none;
-  }
-  .about__overlay__mobile {
-    display: block;
-  }
-}
-
-@media (max-width: 960px) {
-  .flexing {
-    flex-direction: column-reverse;
-  }
-  .project__left__half,
-  .project__right__half {
-    width: 80%;
-  }
-  .project__left__half {
-    padding-bottom: 100px;
-  }
-}
-
-@media (max-width: 750px) {
-  .about__overlay__mobile {
-    display: none;
-  }
-  .about__overlay__xs {
-    display: block;
-  }
-  .about__mosaic {
-    top: 600px;
-    margin-left: 18vw;
-    grid-template-rows: repeat(4, 65px);
-    grid-template-columns: repeat(4, 65px);
-  }
-}
-
-@media (max-width: 650px) {
-  .hero__title__block {
-    padding-right: 45px;
-  }
-  .about__mosaic {
-    margin: -150px auto 200px;
-    grid-template-rows: repeat(4, 75px);
-    grid-template-columns: repeat(4, 75px);
-    position: static;
-  }
-}
-
-@media (max-width: 450px) {
-  .hero__title__block {
-    padding-right: 15px;
-  }
-  .hero__title {
-    font-size: 1.5rem;
-    border: none;
-  }
-  .hero__subtitle {
-    font-size: 0.75rem;
-    margin-top: 0;
-  }
-  .about__mosaic {
-    margin-left: 18vw;
-    grid-template-rows: repeat(4, 75px);
-    grid-template-columns: repeat(4, 75px);
-  }
-}
-
-@media (max-width: 414px) {
-  .hero__overlay {
-    background-attachment: scroll;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .about__overlay__xs {
-    background-attachment: scroll;
-    background-size: cover;
-  }
-  .projects__overlay {
-    background-attachment: scroll;
-    background-size: cover;
-  }
 }

@@ -27,8 +27,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/mediaqueries.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- Hero Section -->
@@ -38,6 +39,18 @@
       <div class="hero__title__block">
         <h1 class="hero__title">MICHAEL SUCHOROLSKI</h1>
         <h2 class="hero__subtitle">FULL STACK JAVASCRIPT DEVELOPER</h2>
+        <div class="hero__icons">
+          <a href="https://www.github.com/mikesuchor">
+            <i class="social__media__icon fab fa-github-square fa-2x" title="Github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/michael-suchorolski">
+            <i class="social__media__icon fab fa-linkedin fa-2x" title="LinkedIn"></i>
+          </a>
+          <a href="mailto:mikesuchor@gmail.com">
+            <i class="social__media__icon fas fa-envelope-square fa-2x" title="Email"></i>
+          </a>
+        </div>
+        <!-- <a href="#about"><i class="fas fa-chevron-down"></i></a> -->
       </div>
     </header>
 
@@ -45,7 +58,7 @@
 
     <div class="abouttrigger"></div>
 
-    <section class="about">
+    <section id="about" class="about">
       <img
         class="about__overlay"
         src="assets/images/mikepng2.png"
@@ -70,35 +83,24 @@
         <h3>ABOUT ME</h3>
         <p>Hi, I'm Michael, a full stack developer living in Miami.</p>
         <p>
-          I'm experienced with building great looking responsive websites with HTML, CSS, Wordpress, Javascript, jQuery,
-          React, React Hooks, Node, MongoDB, and PHP.
+          I specialize in building visually compelling, responsive, professional websites that are fast and built with
+          best practices. My expertise is in front-end development using HTML, CSS, Javascript, and Wordpress but I also
+          have a passion for design and back-end development. My websites are hand coded, and I enjoy the process of
+          bringing them to life from sketches and wireframes to a finished product.
         </p>
         <p>
-          Nisi, aut cumque optio ipsa molestiae incidunt omnis laudantium, tenetur expedita accusantium eligendi qui!
-          Pariatur sed possimus consequatur modi tempora illo consequuntur.Nisi, aut cumque optio ipsa molestiae
-          incidunt omnis laudantium, tenetur expedita accusantium eligendi qui! Pariatur sed possimus consequatur modi
-          tempora illo.
+          I love to travel, take photos, and ride my bike around in my free time and am always looking for exciting new
+          projects to work on.
         </p>
-        <a href="/blog.html"><button>VISIT MY BLOG</button></a>
+        <a href="/blog.html" class="double__border__button">VISIT MY BLOG</a>
       </div>
       <div class="about__mosaic">
-        <img class="mosaic1" src="/assets/images/bicycle.webp" width="430px" height="200px" alt="" />
-        <img class="mosaic2" src="/assets/images/bridge.webp" width="200px" height="430px" alt="" />
-        <img class="mosaic3" src="/assets/images/verticalbeach.webp" width="200px" height="430px" alt="" />
-        <img class="mosaic-center" src="/assets/images/profile-photo.webp" width="400px" height="400px" alt="" />
-        <img class="mosaic4" src="/assets/images/surf.webp" width="200px" height="200px" alt="" />
-        <img class="mosaic5" src="/assets/images/camera.webp" width="200px" height="200px" alt="" />
-        <div class="mosaic6">
-          <a class="mosaic6_1" href="https://github.com/mikesuchor">
-            <i class="about__mosaic__icon fab fa-github-square fa-2x" title="Github"></i>
-          </a>
-          <a class="mosaic6_2" href="https://www.linkedin.com/in/michael-suchorolski/">
-            <i class="about__mosaic__icon fab fa-linkedin fa-2x" title="LinkedIn"></i>
-          </a>
-          <a class="mosaic6_3" href="mailto:mikesuchor@gmail.com">
-            <i class="about__mosaic__icon fas fa-envelope-square fa-2x" title="Email"></i>
-          </a>
-        </div>
+        <img class="mosaic1" src="/assets/images/bicycle.webp" width="430" height="200" alt="" />
+        <img class="mosaic2" src="/assets/images/bridge.webp" width="200" height="430" alt="" />
+        <img class="mosaic3" src="/assets/images/verticalbeach.webp" width="200" height="430" alt="" />
+        <img class="mosaic-center" src="/assets/images/profile-photo.webp" width="400" height="400" alt="" />
+        <img class="mosaic4" src="/assets/images/surf.webp" width="200" height="200" alt="" />
+        <img class="mosaic5" src="/assets/images/beachstreet.jpg" width="200" height="200" alt="" />
       </div>
     </section>
 
@@ -113,9 +115,9 @@
       <h3 class="projects__section__title">PROJECTS</h3>
       <div class="projects__slider">
         <div class="flexing">
-          <div class="project__left__half">
+          <div class="project__left__column">
             <h2 class="project__title">
-              <span>PROJECT 1</span>
+              <span>HARKUS SDS</span>
             </h2>
             <p class="project__description">
               <span>
@@ -126,17 +128,17 @@
                 consequuntur!
               </span>
             </p>
-            <button href="">READ CASE STUDY</button>
+            <a href="https://www.harkus.com" class="double__border__button">VISIT SITE</a>
           </div>
-          <div class="project__right__half">
+          <div class="project__right__column">
             <img src="./assets/images/project1_1.jpg" alt="" class="project__image project__animation3" />
             <img src="./assets/images/project1_2.jpg" alt="" class="project__image project__animation4" />
           </div>
         </div>
         <div class="flexing">
-          <div class="project__left__half">
+          <div class="project__left__column">
             <h2 class="project__title">
-              <span>PROJECT 2</span>
+              <span>MEDLIOR HEALTH</span>
             </h2>
             <p class="project__description">
               <span>
@@ -147,17 +149,17 @@
                 consequuntur!
               </span>
             </p>
-            <button href="">READ CASE STUDY</button>
+            <a href="https://www.medlior.com" class="double__border__button">VISIT SITE</a>
           </div>
-          <div class="project__right__half">
+          <div class="project__right__column">
             <img src="./assets/images/project1_1.jpg" alt="" class="project__image project__animation5" />
             <img src="./assets/images/project1_2.jpg" alt="" class="project__image project__animation6" />
           </div>
         </div>
         <div class="flexing">
-          <div class="project__left__half">
+          <div class="project__left__column">
             <h2 class="project__title">
-              <span>PROJECT 3</span>
+              <span>LANGDON WATERWORKS</span>
             </h2>
             <p class="project__description">
               <span>
@@ -168,9 +170,9 @@
                 consequuntur!
               </span>
             </p>
-            <button href="">READ CASE STUDY</button>
+            <a href="https://langdonwaterworks.ca/" class="double__border__button">VISIT SITE</a>
           </div>
-          <div class="project__right__half">
+          <div class="project__right__column">
             <img src="./assets/images/project1_1.jpg" alt="" class="project__image project__animation1" />
             <img src="./assets/images/project1_2.jpg" alt="" class="project__image project__animation2" />
           </div>
@@ -180,22 +182,7 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-      <p>
-        Designed and created by
-        <a href="https://www.linkedin.com/in/michael-suchorolski/">Michael Suchorolski</a>
-        &copy; 2020
-      </p>
-      <p class="footer__links">
-        <a href="https://www.github.com/mikesuchor">
-          <i class="about__mosaic__icon fab fa-github-square fa-2x" title="Github"></i>Github
-        </a>
-        <a href="https://www.linkedin.com/in/michael-suchorolski">
-          <i class="about__mosaic__icon fab fa-linkedin fa-2x" title="LinkedIn"></i>LinkedIn
-        </a>
-        <a href="mailto:mikesuchor@gmail.com">
-          <i class="about__mosaic__icon fas fa-envelope-square fa-2x" title="Email"></i>Email
-        </a>
-      </p>
+      <p>Designed and created by Michael Suchorolski &copy; 2020</p>
     </footer>
 
     <!-- Scripts -->
