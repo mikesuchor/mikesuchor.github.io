@@ -1,17 +1,5 @@
 /* Media Queries */
 
-@media (max-width: 1500px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .hero__overlay {
-    height: auto;
-  }
-}
-
 @media (min-width: 2350px) {
   .about__mosaic {
     -ms-grid-rows: 200px 15px 200px 15px 200px 15px 200px;
@@ -33,7 +21,7 @@
   }
 }
 
-@media (max-width: 1680px) {
+@media (max-width: 1750px) {
   .about__mosaic {
     grid-template-rows: repeat(4, 100px);
     grid-template-columns: repeat(4, 100px);
@@ -74,11 +62,28 @@
   }
 }
 
-@media (max-width: 1540px) {
+@media (max-width: 1545px) {
   .about__mosaic {
+    top: 410px;
     margin-left: 36vw;
     grid-template-rows: repeat(4, 80px);
     grid-template-columns: repeat(4, 80px);
+  }
+}
+
+@media (max-width: 1500px) {
+  html {
+    font-size: 20px;
+  }
+  .about__mosaic {
+    top: 350px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero__overlay,
+  .hero__overlay__tablet {
+    height: auto;
   }
 }
 
@@ -172,21 +177,11 @@
 }
 
 @media (max-width: 1300px) {
-  .about__mosaic {
-    top: 300px;
-    margin-left: 36vw;
-    grid-template-rows: repeat(4, 65px);
-    grid-template-columns: repeat(4, 65px);
+  .hero__overlay {
+    display: none;
   }
-}
-
-@media (max-width: 1200px) {
-  .hero__title {
-    padding: 10px 0;
-    font-size: 4.5vw;
-  }
-  .hero__subtitle {
-    font-size: 2.5vw;
+  .hero__overlay__tablet {
+    display: block;
   }
   .about__overlay {
     display: none;
@@ -202,6 +197,18 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .hero__title {
+    padding: 10px 0;
+  }
+  .projects__overlay {
+    display: none;
+  }
+  .projects__overlay__tablet {
+    display: block;
+  }
+}
+
 @media (max-width: 1150px) {
   .project__animation1,
   .project__animation2,
@@ -214,6 +221,9 @@
 }
 
 @media (max-width: 1050px) {
+  .hero__title__block {
+    padding-right: 75px;
+  }
   .about__overlay__tablet {
     display: none;
   }
@@ -241,31 +251,44 @@
   }
 }
 
+@media (max-width: 900px) {
+  .hero__title__block {
+    width: 80%;
+  }
+}
+
 @media (max-width: 750px) {
   .about__overlay__mobile {
     display: none;
   }
   .about__overlay__xs {
     display: block;
+    margin-bottom: 125px;
   }
   .about__description {
     width: auto;
     margin-right: 30px;
   }
   .about__mosaic {
-    top: 650px;
-    margin-left: 18vw;
-    grid-template-rows: repeat(4, 65px);
-    grid-template-columns: repeat(4, 65px);
+    top: 500px;
+    margin-left: 28vw;
+    grid-template-rows: repeat(4, 75px);
+    grid-template-columns: repeat(4, 75px);
   }
 }
 
 @media (max-width: 650px) {
-  .hero__title__block {
-    padding-right: 45px;
+  h2 {
+    letter-spacing: 0;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+  .about__overlay__xs {
+    margin-bottom: 0;
   }
   .about__mosaic {
-    margin: -150px auto 200px;
+    margin: -100px auto 75px;
     grid-template-rows: repeat(4, 75px);
     grid-template-columns: repeat(4, 75px);
     position: static;
@@ -294,14 +317,49 @@
   }
 }
 
-@media (max-width: 450px) {
-  .hero__title__block {
-    padding-right: 15px;
+@media (max-width: 625px) {
+  h1 {
+    letter-spacing: 0;
   }
   .hero__title {
-    /* font-size: 1.5rem; */
-    /* border: none; */
-    width: 75%;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__mosaic {
+    margin-top: 0;
+    margin-bottom: 75px;
+  }
+}
+
+@media (max-width: 530px) {
+  .hero__subtitle {
+    font-size: 0.8rem;
+  }
+  .hero__icons {
+    padding-top: 10px;
+  }
+  .about__mosaic {
+    margin-top: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__mosaic {
+    margin-top: 135px;
+  }
+}
+@media (max-width: 450px) {
+  h3 {
+    font-size: 2rem;
+  }
+  .hero__title__block {
+    padding-left: 15px;
+    width: 100%;
+  }
+  .hero__title {
+    width: 100%;
     margin: auto;
   }
   .hero__subtitle {
@@ -316,12 +374,16 @@
     padding-top: 0;
   }
   .about__mosaic {
-    margin-left: 18vw;
+    margin-top: 200px;
     grid-template-rows: repeat(4, 75px);
     grid-template-columns: repeat(4, 75px);
   }
 }
-
+@media (max-width: 425px) {
+  .about__mosaic {
+    margin-top: 250px;
+  }
+}
 @media (max-width: 414px) {
   .hero__overlay {
     background-attachment: scroll;
@@ -336,5 +398,47 @@
   .projects__overlay {
     background-attachment: scroll;
     background-size: cover;
+  }
+}
+@media (max-width: 395px) {
+  .about__mosaic {
+    margin-top: 300px;
+  }
+}
+@media (max-width: 380px) {
+  .hero__title {
+    padding: 5px 0;
+  }
+  .hero__subtitle {
+    font-size: 0.6rem;
+  }
+  .about__mosaic {
+    margin-top: 350px;
+  }
+}
+@media (max-width: 370px) {
+  .hero__title__block {
+    padding-left: 30px;
+  }
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  .hero__subtitle {
+    font-size: 0.45rem;
+  }
+}
+@media (max-width: 365px) {
+  .about__mosaic {
+    margin-top: 400px;
+  }
+}
+@media (max-width: 358px) {
+  .about__mosaic {
+    margin-top: 450px;
+  }
+}
+@media (max-width: 338px) {
+  .about__mosaic {
+    margin-top: 500px;
   }
 }

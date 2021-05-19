@@ -1,6 +1,4 @@
 $(document).ready(() => {
-  centerHeroText();
-
   const aboutMosaic = $('.about__mosaic');
   const projectsImages = $('.project__right__column');
 
@@ -23,16 +21,3 @@ $(document).ready(() => {
   aboutMosaicObserver.observe(aboutMosaic[0]);
   projectsSliderObserver.observe(projectsImages[0]);
 });
-
-$(window).resize(() => {
-  centerHeroText();
-});
-
-// Center hero text by resizing grid container based on height of the overlay image
-const centerHeroText = () => {
-  const hero = $('.hero');
-  const heroOverlay = $('.hero__overlay');
-  const heroOverlayHeight = heroOverlay.css('height');
-
-  hero.css('height', heroOverlayHeight);
-};
