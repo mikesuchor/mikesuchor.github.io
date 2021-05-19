@@ -283,6 +283,7 @@
   }
   .hero__subtitle {
     font-size: 1rem;
+    letter-spacing: 0;
   }
   .about__overlay__xs {
     margin-bottom: 0;
@@ -337,9 +338,6 @@
   .hero__subtitle {
     font-size: 0.8rem;
   }
-  .hero__icons {
-    padding-top: 10px;
-  }
   .about__mosaic {
     margin-top: 75px;
   }
@@ -364,10 +362,6 @@
   }
   .hero__subtitle {
     font-size: 0.75rem;
-    margin-top: 0;
-  }
-  .hero__icons {
-    padding-top: 5px;
   }
   .hero__icons i {
     font-size: 1.75rem;
@@ -407,10 +401,8 @@
 }
 @media (max-width: 380px) {
   .hero__title {
+    line-height: 0.95;
     padding: 5px 0;
-  }
-  .hero__subtitle {
-    font-size: 0.6rem;
   }
   .about__mosaic {
     margin-top: 350px;
@@ -423,11 +415,11 @@
   .hero__title {
     font-size: 1.5rem;
   }
-  .hero__subtitle {
-    font-size: 0.45rem;
-  }
 }
 @media (max-width: 365px) {
+  .hero__icons {
+    padding-top: 10px;
+  }
   .about__mosaic {
     margin-top: 400px;
   }
