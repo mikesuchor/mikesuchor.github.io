@@ -181,6 +181,10 @@ a:visited {
   color: white;
 }
 
+.hero__icons i:hover {
+  color: var(--dark-theme-gold);
+}
+
 .hero__icons a:first-of-type {
   margin-right: 25px;
 }
