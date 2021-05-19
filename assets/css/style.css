@@ -837,11 +837,7 @@ a:visited {
 /* Footer Section */
 
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  margin: auto;
+  text-align: center;
 }
 
 .footer p {
