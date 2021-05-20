@@ -158,16 +158,16 @@ a:visited {
   border-top: 4px solid var(--white);
   border-bottom: 4px solid var(--white);
   opacity: 0;
-  -webkit-animation: hero 1.5s 1.25s forwards;
-  animation: hero 1.5s 1.25s forwards;
+  -webkit-animation: 1.5s hero 1.25s forwards;
+  animation: 1.5s hero 1.25s forwards;
   text-shadow: 2px 2px black;
 }
 
 .hero__subtitle {
   margin-top: 12px;
   opacity: 0;
-  -webkit-animation: hero 1.5s 1.5s forwards;
-  animation: hero 1.5s 1.5s forwards;
+  -webkit-animation: 1.5s hero 1.5s forwards;
+  animation: 1.5s hero 1.5s forwards;
   letter-spacing: 0.225rem;
   text-shadow: 2px 2px black;
 }
@@ -195,27 +195,27 @@ a:visited {
 
 .hero__icons .fa-github-square {
   opacity: 0;
-  -webkit-animation: hero 1.5s 1.75s forwards;
-  animation: hero 1.5s 1.75s forwards;
+  -webkit-animation: 1.5s hero 1.75s forwards;
+  animation: 1.5s hero 1.75s forwards;
 }
 
 .hero__icons .fa-linkedin {
   opacity: 0;
-  -webkit-animation: hero 1.5s 2s forwards;
-  animation: hero 1.5s 2s forwards;
+  -webkit-animation: 1.5s hero 2s forwards;
+  animation: 1.5s hero 2s forwards;
 }
 
 .hero__icons .fa-envelope-square {
   opacity: 0;
-  -webkit-animation: hero 1.5s 2.25s forwards;
-  animation: hero 1.5s 2.25s forwards;
+  -webkit-animation: 1.5s hero 2.25s forwards;
+  animation: 1.5s hero 2.25s forwards;
 }
 
 .fa-chevron-down {
   padding-top: 75px;
   opacity: 0;
-  -webkit-animation: fadein 1.5s 3.5s forwards;
-  animation: fadein 1.5s 3.5s forwards;
+  -webkit-animation: 1.5s fadein 3.5s forwards;
+  animation: 1.5s fadein 3.5s forwards;
 }
 
 /* About Section */
@@ -341,10 +341,8 @@ a:visited {
 }
 
 .mosaic1.animated {
-  -webkit-animation-name: mosaic1;
-  animation-name: mosaic1;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaic1;
+  animation: 3s mosaic1;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
@@ -355,10 +353,8 @@ a:visited {
 }
 
 .mosaic2.animated {
-  -webkit-animation-name: mosaic2;
-  animation-name: mosaic2;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaic2;
+  animation: 3s mosaic2;
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 7;
@@ -367,10 +363,8 @@ a:visited {
 }
 
 .mosaic3.animated {
-  -webkit-animation-name: mosaic3;
-  animation-name: mosaic3;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaic3;
+  animation: 3s mosaic3;
   -ms-grid-row: 3;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
@@ -381,20 +375,16 @@ a:visited {
 }
 
 .mosaic-center.animated {
-  -webkit-animation-name: mosaiccenter;
-  animation-name: mosaiccenter;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaiccenter;
+  animation: 3s mosaiccenter;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .mosaic4.animated {
-  -webkit-animation-name: mosaic4;
-  animation-name: mosaic4;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaic4;
+  animation: 3s mosaic4;
   -ms-grid-row: 7;
   -ms-grid-column: 3;
   grid-area: mosaic4;
@@ -402,10 +392,8 @@ a:visited {
 }
 
 .mosaic5.animated {
-  -webkit-animation-name: mosaic5;
-  animation-name: mosaic5;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation: 3s mosaic5;
+  animation: 3s mosaic5;
   -ms-grid-row: 7;
   -ms-grid-column: 5;
   grid-area: mosaic5;
@@ -658,10 +646,8 @@ a:visited {
 }
 
 .slick-active .project__animation1.animated {
-  -webkit-animation-name: projectanimation1;
-  animation-name: projectanimation1;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation1;
+  animation: 2s projectanimation1;
   left: 100px;
   top: 0;
   z-index: 8;
@@ -669,10 +655,8 @@ a:visited {
 }
 
 .slick-active .project__animation2.animated {
-  -webkit-animation-name: projectanimation2;
-  animation-name: projectanimation2;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation2;
+  animation: 2s projectanimation2;
   left: 320px;
   top: -200px;
   z-index: 8;
@@ -680,10 +664,8 @@ a:visited {
 }
 
 .slick-active .project__animation3.animated {
-  -webkit-animation-name: projectanimation3;
-  animation-name: projectanimation3;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation3;
+  animation: 2s projectanimation3;
   left: 100px;
   top: 0;
   z-index: 8;
@@ -691,10 +673,8 @@ a:visited {
 }
 
 .slick-active .project__animation4.animated {
-  -webkit-animation-name: projectanimation4;
-  animation-name: projectanimation4;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation4;
+  animation: 2s projectanimation4;
   left: 320px;
   top: -200px;
   z-index: 8;
@@ -702,10 +682,8 @@ a:visited {
 }
 
 .slick-active .project__animation5.animated {
-  -webkit-animation-name: projectanimation5;
-  animation-name: projectanimation5;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation5;
+  animation: 2s projectanimation5;
   left: 100px;
   top: 0;
   z-index: 8;
@@ -713,10 +691,8 @@ a:visited {
 }
 
 .slick-active .project__animation6.animated {
-  -webkit-animation-name: projectanimation6;
-  animation-name: projectanimation6;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  -webkit-animation: 2s projectanimation6;
+  animation: 2s projectanimation6;
   left: 320px;
   top: -200px;
   z-index: 8;
