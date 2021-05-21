@@ -858,22 +858,15 @@
     margin-top: 250px;
   }
 }
-/* @media (max-width: 414px) {
-  .hero__overlay {
-    background-attachment: scroll;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .about__overlay__xs {
-    background-attachment: scroll;
-    background-size: cover;
-  }
+@media (max-width: 767px) {
+  .hero__overlay,
+  .about__overlay__mobile,
+  .about__overlay__xs,
   .projects__overlay {
     background-attachment: scroll;
-    background-size: cover;
+    background-position: 0;
   }
-} */
+}
 @media (max-width: 395px) {
   .about__mosaic {
     margin-top: 300px;
