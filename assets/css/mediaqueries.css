@@ -860,9 +860,11 @@
 }
 @media (max-width: 767px) {
   .hero__overlay,
+  .hero__overlay__tablet,
   .about__overlay__mobile,
   .about__overlay__xs,
-  .projects__overlay {
+  .projects__overlay,
+  .projects__overlay__tablet {
     background-attachment: scroll;
     background-position: 0;
   }
