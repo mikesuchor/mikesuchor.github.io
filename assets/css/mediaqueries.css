@@ -7,24 +7,20 @@
 
 /* Media Queries */
 
+@media (min-width: 2125px) {
+  .about__mosaic {
+    grid-template-rows: repeat(4, 175px);
+    grid-template-columns: repeat(4, 175px);
+  }
+}
+
 @media (min-width: 2350px) {
   .about__mosaic {
-    -ms-grid-rows: 200px 15px 200px 15px 200px 15px 200px;
     grid-template-rows: repeat(4, 200px);
-    -ms-grid-columns: 250px 15px 200px 15px 200px 15px 200px;
     grid-template-columns: repeat(4, 200px);
   }
   .project__right__column {
     padding-left: 150px;
-  }
-}
-
-@media (min-width: 2125px) {
-  .about__mosaic {
-    -ms-grid-rows: 175px 15px 175px 15px 175px 15px 175px;
-    grid-template-rows: repeat(4, 175px);
-    -ms-grid-columns: 175px 15px 175px 15px 175px 15px 175px;
-    grid-template-columns: repeat(4, 175px);
   }
 }
 
@@ -34,19 +30,16 @@
     grid-template-columns: repeat(4, 100px);
   }
   .project__animation1,
-  .project__animation3,
-  .project__animation5 {
+  .project__animation3 {
     height: 395px;
     width: 350px;
   }
   .project__animation2,
-  .project__animation4,
-  .project__animation6 {
+  .project__animation4 {
     height: 220px;
   }
   .slick-active .project__animation2,
-  .slick-active .project__animation4,
-  .slick-active .project__animation6 {
+  .slick-active .project__animation4 {
     left: 280px;
   }
 
@@ -81,8 +74,7 @@
 }
 
 @media (max-width: 1440px) {
-  .hero__overlay,
-  .hero__overlay__tablet {
+  .hero__overlay {
     height: auto;
   }
 }
@@ -91,23 +83,18 @@
   .about__mosaic {
     top: 300px;
     margin-left: 36vw;
-    -ms-grid-rows: (80px) [4];
     grid-template-rows: repeat(4, 80px);
-    -ms-grid-columns: (80px) [4];
     grid-template-columns: repeat(4, 80px);
   }
   .project__animation1,
   .project__animation2,
   .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
+  .project__animation4 {
     width: 300px;
     opacity: 0;
   }
   .slick-active .project__animation2.animated,
-  .slick-active .project__animation4.animated,
-  .slick-active .project__animation6.animated {
+  .slick-active .project__animation4.animated {
     top: -125px;
     left: 200px;
   }
@@ -133,38 +120,13 @@
       opacity: 1;
     }
   }
-
-  @keyframes projectanimation6 {
-    0% {
-      top: -50px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
 }
 
 @media (max-width: 1300px) {
-  .hero__overlay {
-    display: none;
-  }
-  .hero__overlay__tablet {
-    display: block;
-  }
-  .about__overlay {
-    display: none;
-  }
-  .about__overlay__tablet {
-    display: block;
-  }
   .about__mosaic {
     top: 480px;
     margin-left: 20vw;
-    -ms-grid-rows: (85px) [4];
     grid-template-rows: repeat(4, 85px);
-    -ms-grid-columns: (85px) [4];
     grid-template-columns: repeat(4, 85px);
   }
 }
@@ -173,21 +135,13 @@
   .hero__title {
     padding: 10px 0;
   }
-  .projects__overlay {
-    display: none;
-  }
-  .projects__overlay__tablet {
-    display: block;
-  }
 }
 
 @media (max-width: 1150px) {
   .project__animation1,
   .project__animation2,
   .project__animation3,
-  .project__animation4,
-  .project__animation5,
-  .project__animation6 {
+  .project__animation4 {
     width: 300px;
   }
 }
@@ -196,21 +150,9 @@
   .hero__title__block {
     padding-right: 75px;
   }
-  .about__overlay__tablet {
-    display: none;
-  }
-  .about__overlay__mobile {
-    display: block;
-  }
 }
 
 @media (max-width: 960px) {
-  .projects_overlay__tablet {
-    display: none;
-  }
-  .projects__overlay__mobile {
-    display: block;
-  }
   .flexing {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -232,6 +174,15 @@
   .slick-dots {
     top: -300px;
   }
+  .project__image.project__animation1,
+  .project__image.project__animation3 {
+    position: static;
+    margin: 0 auto 50px auto;
+  }
+  .project__image.project__animation2,
+  .project__image.project__animation4 {
+    display: none;
+  }
 }
 
 @media (max-width: 900px) {
@@ -242,23 +193,16 @@
 
 @media (max-width: 767px) {
   .hero__overlay,
-  .hero__overlay__tablet,
-  .about__overlay__mobile,
-  .about__overlay__xs,
-  .projects__overlay,
-  .projects__overlay__tablet {
+  .about__overlay,
+  .projects__overlay {
     background-attachment: scroll;
     background-position: 0;
   }
 }
 
 @media (max-width: 750px) {
-  .about__overlay__mobile {
-    display: none;
-  }
-  .about__overlay__xs {
+  .about__overlay {
     height: 735px;
-    display: block;
     margin-bottom: 125px;
   }
   .about__description {
@@ -283,11 +227,14 @@
   h2 {
     letter-spacing: 0;
   }
+  .hero {
+    margin-bottom: 75px;
+  }
   .hero__subtitle {
     font-size: 1rem;
     letter-spacing: 0;
   }
-  .about__overlay__xs {
+  .about__overlay {
     margin-bottom: 0;
   }
   .about__mosaic {
@@ -309,19 +256,8 @@
     flex-direction: column-reverse;
     margin-top: 0;
   }
-  .project__image.project__animation1,
-  .project__image.project__animation3,
-  .project__image.project__animation5 {
-    position: static;
-    margin: 0 auto 50px auto;
-  }
-  .project__image.project__animation2,
-  .project__image.project__animation4,
-  .project__image.project__animation6 {
-    display: none;
-  }
   .slick-list {
-    top: 75px;
+    margin-top: 20px;
   }
   .slick-dots {
     position: static;
@@ -382,9 +318,7 @@
   }
   .about__mosaic {
     margin-top: -50px;
-    -ms-grid-rows: (75px) [4];
     grid-template-rows: repeat(4, 75px);
-    -ms-grid-columns: (75px) [4];
     grid-template-columns: repeat(4, 75px);
   }
 }
@@ -397,15 +331,13 @@
 
 @media (max-width: 400px) {
   .hero__icons i {
-    background: black;
-    color: white;
+    background: var(--black);
+    color: var(--white);
     font-size: 1rem;
   }
   .about__mosaic {
     margin-top: 0;
-    -ms-grid-rows: (60px) [4];
     grid-template-rows: repeat(4, 60px);
-    -ms-grid-columns: (60px) [4];
     grid-template-columns: repeat(4, 60px);
   }
   .project__image {
