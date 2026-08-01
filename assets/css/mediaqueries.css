@@ -184,6 +184,9 @@
     display: block;
     overflow: visible;
   }
+  .slick-track {
+    width: 100% !important;
+  }
   .slick-dots {
     top: -300px;
   }
