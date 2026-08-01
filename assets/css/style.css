@@ -52,7 +52,7 @@ p {
 
 a,
 a:visited {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -116,7 +116,7 @@ a:visited {
 }
 
 .hero__overlay {
-  background-image: url("../images/hero-section-bg.jpg");
+  background-image: url("../images/hero_section/hero-section-bg.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -198,7 +198,7 @@ a:visited {
 }
 
 .about__overlay {
-  background-image: url("../images/about-section-bg.jpg");
+  background-image: url("../images/about_section/about-section-bg.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -417,7 +417,7 @@ a:visited {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/projects-section-bg.jpg");
+  background-image: url("../images/projects_section/projects-section-bg.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
