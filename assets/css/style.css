@@ -544,6 +544,8 @@ a:visited {
 .project__animation4 {
   left: 280px;
   top: -200px;
+  /* reclaim the layout space left behind by the relative top offset */
+  margin-bottom: -200px;
 }
 
 .slick-active .project__animation1.animated {

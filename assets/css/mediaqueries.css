@@ -36,6 +36,17 @@
 @media (max-width: 767px) {
   .hero__overlay {
     background-image: url("../images/hero_section/hero-section-bg-mobile.jpg");
+    /* sharper photo on high-density (retina) phones */
+    background-image: -webkit-image-set(
+      url("../images/hero_section/hero-section-bg-mobile.jpg") 1x,
+      url("../images/hero_section/hero-section-bg-tablet.jpg") 2x,
+      url("../images/hero_section/hero-section-bg.jpg") 3x
+    );
+    background-image: image-set(
+      url("../images/hero_section/hero-section-bg-mobile.jpg") 1x,
+      url("../images/hero_section/hero-section-bg-tablet.jpg") 2x,
+      url("../images/hero_section/hero-section-bg.jpg") 3x
+    );
   }
   .about__overlay {
     background-image: url("../images/about_section/about-section-bg-mobile.jpg");
@@ -147,6 +158,7 @@
   .slick-active .project__animation2.animated,
   .slick-active .project__animation4.animated {
     top: -125px;
+    margin-bottom: -125px;
     left: 200px;
   }
 
@@ -199,7 +211,7 @@
 
 @media (max-width: 1050px) {
   .hero__title__block {
-    padding-right: 75px;
+    padding-right: 30px;
   }
 }
 
@@ -221,9 +233,6 @@
   .slick-list {
     display: block;
     overflow: visible;
-  }
-  .slick-track {
-    width: 100% !important;
   }
   .slick-dots {
     top: -300px;
@@ -273,7 +282,7 @@
 
 @media (max-width: 700px) {
   .hero__icons i {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -282,7 +291,7 @@
     letter-spacing: 0;
   }
   .hero {
-    margin-bottom: 75px;
+    margin-bottom: 5px;
   }
   .hero__subtitle {
     font-size: 1rem;
@@ -331,20 +340,17 @@
 @media (max-width: 600px) {
   .about__mosaic {
     margin-top: -100px;
-    margin-bottom: 75px;
+    margin-bottom: 5px;
   }
 }
 
 @media (max-width: 530px) {
   .hero__subtitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
-  .hero__icons i {
-    font-size: 1.5rem;
-  }
   .about__mosaic {
     margin-top: -75px;
   }
@@ -357,14 +363,16 @@
   }
   .hero__title__block {
     padding-left: 15px;
-    width: 100%;
   }
   .hero__title {
     width: 100%;
     margin: auto;
   }
   .hero__subtitle {
-    font-size: 0.75rem;
+    font-size: 1rem;
+  }
+  .hero__icons {
+    padding-top: 10px;
   }
   .hero__icons i {
     font-size: 1.75rem;
@@ -384,11 +392,6 @@
 }
 
 @media (max-width: 400px) {
-  .hero__icons i {
-    background: var(--black);
-    color: var(--white);
-    font-size: 1rem;
-  }
   .about__mosaic {
     margin-top: 0;
     grid-template-rows: repeat(4, 60px);
@@ -440,5 +443,74 @@
 @media (max-width: 338px) {
   .about__mosaic {
     margin-top: 125px;
+  }
+}
+
+/* Mobile: hide the cutout bar images and let the about text flow normally.
+   Kept last so it overrides the mosaic offsets in the breakpoints above. */
+@media (max-width: 600px) {
+  /* taller hero; stretches the cutout frame (the photo is a CSS background, so it stays undistorted) */
+  .hero__overlay {
+    height: 105vw;
+    max-height: none;
+    object-fit: fill;
+  }
+  /* the black box in the cutout sits left of center, so pad the right more */
+  .hero__title__block {
+    padding: 0 45px 0 20px;
+  }
+  .hero__icons {
+    padding-top: 25px;
+  }
+  .about__overlay,
+  .projects__overlay {
+    display: none;
+  }
+  .about__description {
+    position: static;
+    margin: 0 20px;
+  }
+  .about__description p,
+  .project__description {
+    font-size: 0.9rem;
+  }
+  .about__mosaic {
+    margin-top: 35px;
+  }
+  .projects__section__title {
+    text-align: left;
+    margin: 40px 20px 0;
+  }
+  .slick-dots {
+    margin: 15px 0 0;
+    padding-left: 0;
+  }
+  .slick-dots li button {
+    width: 57px;
+    height: 57px;
+    padding: 0;
+    margin: 0 15px 0 0;
+    border-width: 3px;
+    font-size: 17px;
+  }
+  .project__left__column,
+  .project__right__column {
+    width: 100%;
+  }
+  .project__left__column {
+    padding-left: 0;
+  }
+  .project__right__column .project__image {
+    width: 100%;
+    height: auto;
+  }
+  .footer p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .hero__title__block {
+    padding: 0 25px 0 10px;
   }
 }
