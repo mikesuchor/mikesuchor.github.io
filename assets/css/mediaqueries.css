@@ -158,7 +158,6 @@
   .slick-active .project__animation2.animated,
   .slick-active .project__animation4.animated {
     top: -125px;
-    margin-bottom: -125px;
     left: 200px;
   }
 
