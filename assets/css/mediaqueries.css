@@ -572,6 +572,10 @@
   .about__mosaic {
     justify-content: start;
     margin-left: 15vw;
+    /* slightly smaller so it clears the palm tree in the frame */
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: repeat(4, 75px);
+    gap: 12px;
   }
 }
 
@@ -607,5 +611,13 @@
 @media (min-width: 961px) and (max-width: 1300px) {
   .hero__title__block {
     padding-left: 60px;
+  }
+}
+
+/* Laptops 1201–1400px: the stretched projects frame's bottom photo strip
+   starts ~80% down; extra height keeps the screenshots clear of it */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .projects {
+    padding-bottom: 50px;
   }
 }
