@@ -100,11 +100,6 @@
   .project__animation4 {
     height: 220px;
   }
-  .slick-active .project__animation2,
-  .slick-active .project__animation4 {
-    left: 280px;
-  }
-
   @keyframes projectanimation2 {
     0% {
       left: 220px;
@@ -135,18 +130,9 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .hero__overlay {
-    height: auto;
-  }
-}
-
 @media (max-width: 1400px) {
   .about__mosaic {
     top: 300px;
-    margin-left: 36vw;
-    grid-template-rows: repeat(4, 80px);
-    grid-template-columns: repeat(4, 80px);
   }
   .project__animation1,
   .project__animation2,
@@ -186,8 +172,6 @@
 
 @media (max-width: 1300px) {
   .about__mosaic {
-    top: 480px;
-    margin-left: 20vw;
     grid-template-rows: repeat(4, 85px);
     grid-template-columns: repeat(4, 85px);
   }
@@ -199,38 +183,18 @@
   }
 }
 
-@media (max-width: 1150px) {
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4 {
-    width: 300px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .hero__title__block {
-    padding-right: 30px;
-  }
-}
-
 @media (max-width: 960px) {
   .flexing {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    height: auto;
-  }
-  .projects__slider {
-    margin-top: 350px;
   }
   .project__left__column,
   .project__right__column {
     width: 80%;
   }
   .slick-list {
-    display: block;
     overflow: visible;
   }
   .slick-dots {
@@ -265,7 +229,6 @@
 @media (max-width: 750px) {
   .about__overlay {
     height: 735px;
-    margin-bottom: 125px;
   }
   .about__description {
     width: auto;
@@ -273,7 +236,6 @@
   }
   .about__mosaic {
     top: 500px;
-    margin-left: 28vw;
     grid-template-rows: repeat(4, 75px);
     grid-template-columns: repeat(4, 75px);
   }
@@ -286,9 +248,6 @@
 }
 
 @media (max-width: 650px) {
-  h2 {
-    letter-spacing: 0;
-  }
   .hero {
     margin-bottom: 5px;
   }
@@ -301,12 +260,7 @@
   }
   .about__mosaic {
     margin: -175px auto 75px;
-    grid-template-rows: repeat(4, 75px);
-    grid-template-columns: repeat(4, 75px);
     position: static;
-  }
-  .projects__section__title {
-    margin-bottom: 50px;
   }
   .projects__slider {
     display: -webkit-box;
@@ -338,20 +292,7 @@
 
 @media (max-width: 600px) {
   .about__mosaic {
-    margin-top: -100px;
     margin-bottom: 5px;
-  }
-}
-
-@media (max-width: 530px) {
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .about__mosaic {
-    margin-top: -75px;
   }
 }
 
@@ -360,44 +301,15 @@
   h3 {
     font-size: 1.5rem;
   }
-  .hero__title__block {
-    padding-left: 15px;
-  }
-  .hero__title {
-    width: 100%;
-    margin: auto;
-  }
-  .hero__subtitle {
-    font-size: 1rem;
-  }
-  .hero__icons {
-    padding-top: 10px;
-  }
   .hero__icons i {
     font-size: 2rem;
-    padding-top: 0;
-  }
-  .about__mosaic {
-    margin-top: -50px;
-    grid-template-rows: repeat(4, 75px);
-    grid-template-columns: repeat(4, 75px);
-  }
-}
-
-@media (max-width: 425px) {
-  .about__mosaic {
-    margin-top: -25px;
   }
 }
 
 @media (max-width: 400px) {
   .about__mosaic {
-    margin-top: 0;
     grid-template-rows: repeat(4, 60px);
     grid-template-columns: repeat(4, 60px);
-  }
-  .project__image {
-    width: 235px;
   }
 }
 
@@ -405,43 +317,6 @@
   .hero__title {
     line-height: 0.95;
     padding: 5px 0;
-  }
-  .about__mosaic {
-    margin-top: 25px;
-  }
-  .slick-dots li button {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (max-width: 370px) {
-  .hero__title__block {
-    padding-left: 30px;
-  }
-  .hero__title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 365px) {
-  .hero__icons {
-    padding-top: 10px;
-  }
-  .about__mosaic {
-    margin-top: 50px;
-  }
-}
-
-@media (max-width: 358px) {
-  .about__mosaic {
-    margin-top: 75px;
-  }
-}
-
-@media (max-width: 338px) {
-  .about__mosaic {
-    margin-top: 125px;
   }
 }
 
