@@ -3,6 +3,9 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
     fade: true,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    // slick 1.8.1's touch handler can block vertical page scrolling when a
+    // gesture starts on the slider; switch projects with the dots instead
+    swipe: false
   });
 });
