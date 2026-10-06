@@ -7,6 +7,44 @@
 
 /* Media Queries */
 
+/* Responsive section background images — ranges are mutually exclusive
+   so only one size downloads per viewport width. */
+@media (min-width: 1301px) {
+  .hero__overlay {
+    background-image: url("../images/hero_section/hero-section-bg.jpg");
+  }
+  .about__overlay {
+    background-image: url("../images/about_section/about-section-bg.jpg");
+  }
+  .projects__overlay {
+    background-image: url("../images/projects_section/projects-section-bg.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) {
+  .hero__overlay {
+    background-image: url("../images/hero_section/hero-section-bg-tablet.jpg");
+  }
+  .about__overlay {
+    background-image: url("../images/about_section/about-section-bg-tablet.jpg");
+  }
+  .projects__overlay {
+    background-image: url("../images/projects_section/projects-section-bg-tablet.jpg");
+  }
+}
+
+@media (max-width: 767px) {
+  .hero__overlay {
+    background-image: url("../images/hero_section/hero-section-bg-mobile.jpg");
+  }
+  .about__overlay {
+    background-image: url("../images/about_section/about-section-bg-mobile.jpg");
+  }
+  .projects__overlay {
+    background-image: url("../images/projects_section/projects-section-bg-mobile.jpg");
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
