@@ -574,3 +574,38 @@
     margin-left: 15vw;
   }
 }
+
+/* Tablet portrait: replace the old 350px slider offset / -300px dots hack with
+   normal flow (dots above the slides), so there's no empty gap */
+@media (min-width: 601px) and (max-width: 960px) {
+  .projects__section__title {
+    margin-bottom: 50px;
+  }
+  .projects__slider {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+  .slick-dots {
+    position: static;
+    margin: 0;
+    padding-left: 15px;
+  }
+  .slick-list {
+    margin-top: 30px;
+  }
+}
+
+/* Tablet portrait (iPad mini 768px etc.) */
+@media (min-width: 601px) and (max-width: 960px) {
+  .hero__title__block {
+    padding-left: 60px;
+  }
+}
+
+/* Tablet landscape / small laptop (iPad mini 1024px etc.) */
+@media (min-width: 961px) and (max-width: 1300px) {
+  .hero__title__block {
+    padding-left: 60px;
+  }
+}
