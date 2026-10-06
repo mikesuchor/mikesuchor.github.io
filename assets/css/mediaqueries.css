@@ -513,3 +513,64 @@
     padding: 0 25px 0 10px;
   }
 }
+
+/* Tablet/small laptop: the hero cutout's black box spans ~2.5%–87% of the
+   width (left of center), so fit the title block inside it */
+@media (min-width: 601px) and (max-width: 1300px) {
+  .hero__title__block {
+    width: auto;
+    padding: 0;
+    left: 7%;
+    right: 18%;
+  }
+}
+
+/* Side-by-side projects on narrow laptops: the screenshots use fixed offsets,
+   so shift the column left to keep them inside the black box */
+@media (min-width: 961px) and (max-width: 1100px) {
+  .project__right__column {
+    position: relative;
+    left: -80px;
+  }
+}
+
+/* Tablet/small laptop About: let the text and mosaic set the section height
+   and stretch the cutout frame behind them, instead of the image's aspect
+   ratio setting the height (which left a big empty area or clipped content) */
+@media (min-width: 601px) and (max-width: 1300px) {
+  .about {
+    padding: 0 0 140px;
+  }
+  /* about's frame has a 10px bottom border vs the hero's 27px; match the gap */
+  .projects {
+    margin-top: 17px;
+  }
+  .about__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    object-fit: fill;
+  }
+  .about__description {
+    position: relative;
+    top: 0;
+  }
+  .about__mosaic {
+    position: relative;
+    top: 0;
+    width: 55%;
+    margin: 50px 0 0 calc(15vw - 40px);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  /* left-align with the text; any further left overlaps the frame's photo strip */
+  .about__mosaic {
+    justify-content: start;
+    margin-left: 15vw;
+  }
+}
