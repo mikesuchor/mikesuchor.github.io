@@ -31,8 +31,11 @@ html {
   padding-bottom: 50px;
 }
 
+/* clip, not hidden: hidden on both html and body turns body into its own
+   scroll container, and iOS Safari sends the first swipe to it (it can't
+   scroll, so the page rubber-bands) until a tap re-targets the page */
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1 {
