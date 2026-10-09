@@ -81,34 +81,12 @@
     grid-template-rows: repeat(4, 200px);
     grid-template-columns: repeat(4, 200px);
   }
-  .project__right__column {
-    padding-left: 150px;
-  }
 }
 
 @media (max-width: 1750px) {
   .about__mosaic {
     grid-template-rows: repeat(4, 100px);
     grid-template-columns: repeat(4, 100px);
-  }
-  .project__animation1,
-  .project__animation3 {
-    height: 395px;
-    width: 350px;
-  }
-  .project__animation2,
-  .project__animation4 {
-    height: 220px;
-  }
-  @keyframes projectanimation2 {
-    0% {
-      left: 220px;
-      opacity: 0;
-    }
-    100% {
-      left: 280px;
-      opacity: 1;
-    }
   }
 }
 
@@ -134,40 +112,8 @@
   .about__mosaic {
     top: 300px;
   }
-  .project__animation1,
-  .project__animation2,
-  .project__animation3,
-  .project__animation4 {
-    width: 300px;
-    opacity: 0;
-  }
-  .slick-active .project__animation2.animated,
-  .slick-active .project__animation4.animated {
-    top: -125px;
-    left: 200px;
-  }
 
-  @keyframes projectanimation2 {
-    0% {
-      left: 125px;
-      opacity: 0;
-    }
-    100% {
-      left: 200px;
-      opacity: 1;
-    }
-  }
 
-  @keyframes projectanimation4 {
-    0% {
-      top: -200px;
-      opacity: 0;
-    }
-    100% {
-      top: -125px;
-      opacity: 1;
-    }
-  }
 }
 
 @media (max-width: 1300px) {
@@ -197,17 +143,12 @@
   .slick-list {
     overflow: visible;
   }
+  /* screenshots sit above the title when stacked; keep them apart */
+  .project__right__column {
+    padding-bottom: 50px;
+  }
   .slick-dots {
     top: -300px;
-  }
-  .project__image.project__animation1,
-  .project__image.project__animation3 {
-    position: static;
-    margin: 0 auto 50px auto;
-  }
-  .project__image.project__animation2,
-  .project__image.project__animation4 {
-    display: none;
   }
 }
 
@@ -374,9 +315,8 @@
   .project__left__column {
     padding-left: 0;
   }
-  .project__right__column .project__image {
-    width: 100%;
-    height: auto;
+  .project__right__column {
+    padding: 0 0 50px;
   }
   .footer p {
     font-size: 0.6rem;
@@ -397,15 +337,6 @@
     padding: 0;
     left: 7%;
     right: 18%;
-  }
-}
-
-/* Side-by-side projects on narrow laptops: the screenshots use fixed offsets,
-   so shift the column left to keep them inside the black box */
-@media (min-width: 961px) and (max-width: 1100px) {
-  .project__right__column {
-    position: relative;
-    left: -80px;
   }
 }
 
@@ -496,5 +427,14 @@
 @media (min-width: 1201px) and (max-width: 1400px) {
   .projects {
     padding-bottom: 50px;
+  }
+}
+
+/* The frame's black box ends ~87% across, with a photo strip to its right;
+   keep the slider (and the screenshots) inside the box */
+@media (min-width: 901px) {
+  .projects__slider {
+    width: 80%;
+    margin: 0 0 0 5%;
   }
 }
