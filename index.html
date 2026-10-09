@@ -51,9 +51,9 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "G-L9VTG241TG");
+      gtag('config', 'G-L9VTG241TG');
     </script>
     <link
       rel="stylesheet"
@@ -85,8 +85,8 @@
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/mediaqueries.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=7" />
+    <link rel="stylesheet" href="assets/css/mediaqueries.css?v=2" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;800&display=swap"
@@ -154,17 +154,17 @@
         <div class="about__description">
           <h2>ABOUT ME</h2>
           <p>
-            Hi, I'm Michael, a frontend developer living in Florida with 8+ years
-            of experience building high-performance, responsive web, mobile, and
-            desktop applications.
+            Hi, I'm Michael, a frontend developer living in Florida with 8+
+            years of experience building high-performance, responsive web,
+            mobile, and desktop applications.
           </p>
           <p>
             I specialize in React and TypeScript, with backend experience in
-            Node.js, Python, and SQL. I've worked on everything from
-            large-scale legacy rebuilds to fresh, modern apps, collaborating
-            with cross-functional teams to ship products that are built to last.
-            I've paired that experience with AI-assisted workflows using Claude
-            to boost productivity and code quality.
+            Node.js, Python, and SQL. I've worked on everything from large-scale
+            legacy rebuilds to fresh, modern apps, collaborating with
+            cross-functional teams to ship products that are built to last. I've
+            paired that experience with AI-assisted workflows using Claude to
+            boost productivity and code quality.
           </p>
           <p>
             Skills: React, TypeScript, JavaScript, Next.js, Tailwind, HTML, CSS,
@@ -253,33 +253,38 @@
               </h3>
               <p class="project__description">
                 <span>
-                  Harkus was a marketing company where I built custom
-                  WordPress sites for clients. This is the company's own
-                  redesigned site, built from scratch with WordPress blocks,
-                  custom JavaScript, and PHP. Scroll down to follow the red
-                  line as it snakes from the first section to the submit
-                  button.
-                  <br /><br />Some features are broken now that the company is
-                  closed, but most of the visuals still work.
+                  Harkus was a marketing company where I built custom WordPress
+                  sites for clients. This is the company's own redesigned site,
+                  built from scratch with WordPress blocks, custom JavaScript,
+                  and PHP. Scroll down to follow the red line as it snakes from
+                  the first section to the submit button.
                 </span>
               </p>
+              <ul class="project__tags">
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>SCSS</li>
+              </ul>
               <a href="http://harkus.com" class="double__border">VISIT SITE</a>
             </div>
             <div class="project__right__column">
-              <img
-                src="./assets/images/projects_section/harkus1.jpg"
-                height="450"
-                width="400"
-                alt="Harkus SDS website homepage"
-                class="project__image project__animation1"
-              />
-              <img
-                src="./assets/images/projects_section/harkus2.jpg"
-                height="250"
-                width="400"
-                alt="Harkus SDS website's 'How we work together' section"
-                class="project__image project__animation2"
-              />
+              <div class="project__media">
+                <img
+                  src="./assets/images/projects_section/harkus-1.jpg"
+                  width="1200"
+                  height="1350"
+                  alt="Harkus SDS website homepage"
+                  class="project__shot project__shot--main"
+                />
+                <img
+                  src="./assets/images/projects_section/harkus-2.jpg"
+                  width="1200"
+                  height="750"
+                  alt="Harkus SDS website's 'Your brand' section"
+                  class="project__shot project__shot--sub"
+                />
+              </div>
             </div>
           </div>
           <div class="flexing">
@@ -289,14 +294,19 @@
               </h3>
               <p class="project__description">
                 <span>
-                  Streaming sites make it hard to find something new to watch,
-                  so I built a movie browser that lets you hide anything you've
-                  already seen or don't want to see. Favorites and hidden
-                  movies are saved in your browser, so your list is there when
-                  you come back.
-                  <br /><br />Built with React and the TMDB API.
+                  Every streaming site keeps showing you movies you've already
+                  seen or don't want to see. Here, one click makes them
+                  disappear for good. Browse what's popular, save your
+                  favorites, and the app remembers everything the next time you
+                  visit.
                 </span>
               </p>
+              <ul class="project__tags">
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>TMDB API</li>
+                <li>Styled Components</li>
+              </ul>
               <a
                 href="https://movie-database.netlify.app/"
                 class="double__border"
@@ -304,20 +314,22 @@
               >
             </div>
             <div class="project__right__column">
-              <img
-                src="./assets/images/projects_section/moviedb1.jpg"
-                height="450"
-                width="400"
-                alt="Movie Database app showing a featured movie banner and favorites list"
-                class="project__image project__animation3"
-              />
-              <img
-                src="./assets/images/projects_section/moviedb2.jpg"
-                height="250"
-                width="400"
-                alt="Movie Database app's trending movies grid"
-                class="project__image project__animation4"
-              />
+              <div class="project__media">
+                <img
+                  src="./assets/images/projects_section/moviedb-1.jpg"
+                  width="1200"
+                  height="1350"
+                  alt="Movie Database app showing a featured movie and trending list"
+                  class="project__shot project__shot--main"
+                />
+                <img
+                  src="./assets/images/projects_section/moviedb-2.jpg"
+                  width="1200"
+                  height="750"
+                  alt="Movie Database app's grid of trending movies"
+                  class="project__shot project__shot--sub"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -331,7 +343,7 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="assets/js/slickSlider.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/slickSlider.js?v=2"></script>
+    <script src="assets/js/scripts.js?v=2"></script>
   </body>
 </html>
