@@ -542,11 +542,23 @@ a:visited {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--dark-theme-gold);
+  /* Clips the dot in front of whichever tag starts a line (see below). */
+  overflow: hidden;
 }
 
-.project__tags li + li::before {
+/* A dot between tags. Each tag's dot sits in the gap to its left; the first tag on
+   every line has its dot pushed outside the list, where overflow: hidden cuts it off,
+   so a wrapped line never starts with a stray dot. */
+.project__tags li {
+  margin-right: 1.4em;
+}
+
+.project__tags li::before {
   content: '\00b7';
-  margin: 0 0.55em;
+  display: inline-block;
+  width: 1.4em;
+  margin-left: -1.4em;
+  text-align: center;
 }
 
 .project__right__column {
