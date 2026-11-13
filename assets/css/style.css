@@ -524,12 +524,6 @@ a:visited {
   transform: none;
 }
 
-.projects__num {
-  font-size: 0.6rem;
-  font-weight: 800;
-  color: var(--dark-theme-gold);
-}
-
 .projects__name {
   font-size: 0.9rem;
   font-weight: 800;
