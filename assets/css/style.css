@@ -22,16 +22,13 @@ picture {
   display: contents;
 }
 
-/* no selecting text or dragging/long-pressing images anywhere on the page */
-html {
+/* text can be selected; images can't be dragged out, selected or long-pressed */
+img {
   -webkit-user-select: none;
   user-select: none;
-  -webkit-touch-callout: none;
-}
-
-img {
   -webkit-user-drag: none;
   user-drag: none;
+  -webkit-touch-callout: none;
 }
 
 html {
