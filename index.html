@@ -56,11 +56,6 @@
       gtag('config', 'G-L9VTG241TG');
     </script>
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-    />
-    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="assets/images/favicon/apple-touch-icon.png"
@@ -85,11 +80,11 @@
       integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css?v=7" />
-    <link rel="stylesheet" href="assets/css/mediaqueries.css?v=3" />
+    <link rel="stylesheet" href="assets/css/style.css?v=8" />
+    <link rel="stylesheet" href="assets/css/mediaqueries.css?v=4" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Raleway:wght@200;300;400;600;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -228,7 +223,7 @@
 
       <!-- Projects Section -->
 
-      <section class="projects">
+      <section id="projects" class="projects">
         <picture>
           <source
             media="(max-width: 960px)"
@@ -244,217 +239,326 @@
             alt=""
           />
         </picture>
-        <h2 class="projects__section__title">PROJECTS</h2>
-        <div class="projects__slider">
-          <div class="flexing">
-            <div class="project__left__column">
-              <h3 class="project__title">
-                <span>REDLINE</span>
-              </h3>
-              <p class="project__description">
-                <span>
-                  I wanted a workout tracker that shows me what I lifted last
-                  time while I'm doing it now, without the subscription. Redline
-                  plans routines, logs every set, tracks records and muscle
-                  balance, and installs on the phone like an app that works
-                  offline at the gym.
-                </span>
-              </p>
-              <ul class="project__tags">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>PWA</li>
-                <li>Cloudflare</li>
-              </ul>
-              <!-- TODO: live Redline URL -->
-              <a href="#" class="double__border">VISIT SITE</a>
-            </div>
-            <div class="project__right__column">
+        <div class="projects__inner">
+          <div class="projects__index">
+            <h2 class="projects__section__title">PROJECTS</h2>
+            <ul class="projects__list" role="tablist" aria-label="Projects">
+              <li role="presentation">
+                <button
+                  class="projects__tab is-active"
+                  id="tab-redline"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="project-redline"
+                >
+                  <span class="projects__num">01</span>
+                  <span class="projects__name">
+                    REDLINE
+                    <small>Workout tracker</small>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="projects__tab"
+                  id="tab-tandem"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="project-tandem"
+                  tabindex="-1"
+                >
+                  <span class="projects__num">02</span>
+                  <span class="projects__name">
+                    TANDEM
+                    <small>Family calendar</small>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="projects__tab"
+                  id="tab-everydex"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="project-everydex"
+                  tabindex="-1"
+                >
+                  <span class="projects__num">03</span>
+                  <span class="projects__name">
+                    EVERYDEX
+                    <small>Pokémon GO collection tracker</small>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="projects__tab"
+                  id="tab-moviedb"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="project-moviedb"
+                  tabindex="-1"
+                >
+                  <span class="projects__num">04</span>
+                  <span class="projects__name">
+                    MOVIE DB
+                    <small>Movie browser</small>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button
+                  class="projects__tab"
+                  id="tab-harkus"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="project-harkus"
+                  tabindex="-1"
+                >
+                  <span class="projects__num">05</span>
+                  <span class="projects__name">
+                    HARKUS SDS
+                    <small>Agency site</small>
+                  </span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="projects__stage">
+            <article
+              class="project is-active"
+              id="project-redline"
+              role="tabpanel"
+              aria-labelledby="tab-redline"
+            >
               <div class="project__media">
-                <img
-                  src="./assets/images/projects_section/redline-1.jpg"
-                  width="1200"
-                  height="1350"
-                  alt="Redline workouts home and a live workout with last time's sets"
-                  class="project__shot project__shot--main"
-                />
                 <img
                   src="./assets/images/projects_section/redline-2.jpg"
                   width="1200"
                   height="750"
                   alt="Redline stats, bench press progress chart and workout history"
-                  class="project__shot project__shot--sub"
+                  class="project__shot project__shot--wide"
+                  loading="lazy"
                 />
-              </div>
-            </div>
-          </div>
-          <div class="flexing">
-            <div class="project__left__column">
-              <h3 class="project__title">
-                <span>TANDEM</span>
-              </h3>
-              <p class="project__description">
-                <span>
-                  A family calendar for the iPad on our kitchen table. Both our
-                  Google and Apple calendars in one color-coded view with the
-                  weather, plus shared tasks, grocery lists and a weekly meal
-                  plan that sync live to our phones.
-                </span>
-              </p>
-              <ul class="project__tags">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>Supabase</li>
-                <li>iCal</li>
-              </ul>
-              <!-- TODO: live Tandem URL -->
-              <a href="#" class="double__border">VISIT SITE</a>
-            </div>
-            <div class="project__right__column">
-              <div class="project__media">
                 <img
-                  src="./assets/images/projects_section/tandem-1.jpg"
+                  src="./assets/images/projects_section/redline-1.jpg"
                   width="1200"
                   height="1350"
-                  alt="Tandem on a phone: agenda and shared tasks"
-                  class="project__shot project__shot--main"
+                  alt="Redline workouts home and a live workout with last time's sets"
+                  class="project__shot project__shot--tall"
+                  loading="lazy"
                 />
+              </div>
+              <div class="project__info">
+                <h3 class="project__title">REDLINE</h3>
+                <p class="project__description">
+                  A workout tracker that shows what I lifted last time while I'm
+                  lifting now, with no subscription. It plans routines, logs
+                  every set, tracks records and muscle balance, and works
+                  offline at the gym.
+                </p>
+                <ul class="project__tags">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Cloudflare</li>
+                </ul>
+                <a
+                  href="https://redline-3oz.pages.dev/"
+                  class="double__border"
+                  target="_blank"
+                  rel="noopener"
+                  >VISIT SITE</a
+                >
+              </div>
+            </article>
+            <article
+              class="project"
+              id="project-tandem"
+              role="tabpanel"
+              aria-labelledby="tab-tandem"
+            >
+              <div class="project__media">
                 <img
                   src="./assets/images/projects_section/tandem-2.jpg"
                   width="1200"
                   height="750"
                   alt="Tandem week calendar on the iPad, color-coded by person"
-                  class="project__shot project__shot--sub"
+                  class="project__shot project__shot--wide"
+                  loading="lazy"
                 />
-              </div>
-            </div>
-          </div>
-          <div class="flexing">
-            <div class="project__left__column">
-              <h3 class="project__title">
-                <span>EVERYDEX</span>
-              </h3>
-              <p class="project__description">
-                <span>
-                  Pokémon GO has a separate collection for shiny, lucky,
-                  shadow, XXL and more, and nothing to track them all. Everydex
-                  puts every dex in one place: tap to mark a catch, filter to
-                  what you still need, and sign in with Google to sync across
-                  devices.
-                </span>
-              </p>
-              <ul class="project__tags">
-                <li>React</li>
-                <li>TypeScript</li>
-                <li>PostgreSQL</li>
-                <li>Supabase</li>
-              </ul>
-              <a href="https://everydex.pages.dev" class="double__border">VISIT SITE</a>
-            </div>
-            <div class="project__right__column">
-              <div class="project__media">
                 <img
-                  src="./assets/images/projects_section/everydex-1.jpg"
+                  src="./assets/images/projects_section/tandem-1.jpg"
                   width="1200"
                   height="1350"
-                  alt="Everydex home and the shiny dex on a phone"
-                  class="project__shot project__shot--main"
+                  alt="Tandem on a phone: agenda and shared tasks"
+                  class="project__shot project__shot--tall"
+                  loading="lazy"
                 />
+              </div>
+              <div class="project__info">
+                <h3 class="project__title">TANDEM</h3>
+                <p class="project__description">
+                  A family calendar for our kitchen iPad. Both our Google and
+                  Apple calendars in one color-coded view with the weather, plus
+                  shared tasks, grocery lists and a weekly meal plan that sync
+                  to our phones.
+                </p>
+                <ul class="project__tags">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Supabase</li>
+                  <li>PostgreSQL</li>
+                </ul>
+                <a
+                  href="https://tandem-4ty.pages.dev/"
+                  class="double__border"
+                  target="_blank"
+                  rel="noopener"
+                  >VISIT SITE</a
+                >
+              </div>
+            </article>
+            <article
+              class="project"
+              id="project-everydex"
+              role="tabpanel"
+              aria-labelledby="tab-everydex"
+            >
+              <div class="project__media">
                 <img
                   src="./assets/images/projects_section/everydex-2.jpg"
                   width="1200"
                   height="750"
                   alt="Everydex home page on desktop with the Pokédex and nine special dexes"
-                  class="project__shot project__shot--sub"
+                  class="project__shot project__shot--wide"
+                  loading="lazy"
                 />
-              </div>
-            </div>
-          </div>
-          <div class="flexing">
-            <div class="project__left__column">
-              <h3 class="project__title">
-                <span>MOVIE DATABASE</span>
-              </h3>
-              <p class="project__description">
-                <span>
-                  Every streaming site keeps showing you movies you've already
-                  seen or don't want to see. Here, one click makes them
-                  disappear for good. Browse what's popular, save your
-                  favorites, and the app remembers everything the next time you
-                  visit.
-                </span>
-              </p>
-              <ul class="project__tags">
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>TMDB API</li>
-                <li>Styled Components</li>
-              </ul>
-              <a
-                href="https://movie-database.netlify.app/"
-                class="double__border"
-                >VISIT SITE</a
-              >
-            </div>
-            <div class="project__right__column">
-              <div class="project__media">
                 <img
-                  src="./assets/images/projects_section/moviedb-1.jpg"
+                  src="./assets/images/projects_section/everydex-1.jpg"
                   width="1200"
                   height="1350"
-                  alt="Movie Database featured movie and trending grid on a phone"
-                  class="project__shot project__shot--main"
+                  alt="Everydex home and the shiny dex on a phone"
+                  class="project__shot project__shot--tall"
+                  loading="lazy"
                 />
+              </div>
+              <div class="project__info">
+                <h3 class="project__title">EVERYDEX</h3>
+                <p class="project__description">
+                  Pokémon GO tracks shiny, lucky, shadow, XXL and more as
+                  separate collections, with nothing to track them all. Everydex
+                  puts every dex in one place, filters to what you still need,
+                  and syncs with Google sign-in.
+                </p>
+                <ul class="project__tags">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Python</li>
+                  <li>Supabase</li>
+                </ul>
+                <a
+                  href="https://everydex.pages.dev/"
+                  class="double__border"
+                  target="_blank"
+                  rel="noopener"
+                  >VISIT SITE</a
+                >
+              </div>
+            </article>
+            <article
+              class="project"
+              id="project-moviedb"
+              role="tabpanel"
+              aria-labelledby="tab-moviedb"
+            >
+              <div class="project__media">
                 <img
                   src="./assets/images/projects_section/moviedb-2.jpg"
                   width="1200"
                   height="750"
-                  alt="Movie Database on desktop with The Odyssey featured"
-                  class="project__shot project__shot--sub"
+                  alt="Movie DB on desktop with The Odyssey featured"
+                  class="project__shot project__shot--wide"
+                  loading="lazy"
                 />
-              </div>
-            </div>
-          </div>
-          <div class="flexing">
-            <div class="project__left__column">
-              <h3 class="project__title">
-                <span>HARKUS SDS</span>
-              </h3>
-              <p class="project__description">
-                <span>
-                  Harkus, the marketing agency where I built WordPress sites for
-                  clients, needed a new site of its own. I built it from scratch
-                  with WordPress blocks, custom JavaScript and PHP. Scroll down
-                  to follow the red line from the top of the page to the submit
-                  button.
-                </span>
-              </p>
-              <ul class="project__tags">
-                <li>WordPress</li>
-                <li>PHP</li>
-                <li>JavaScript</li>
-                <li>SCSS</li>
-              </ul>
-              <a href="http://harkus.com" class="double__border">VISIT SITE</a>
-            </div>
-            <div class="project__right__column">
-              <div class="project__media">
                 <img
-                  src="./assets/images/projects_section/harkus-1.jpg"
+                  src="./assets/images/projects_section/moviedb-1.jpg"
                   width="1200"
                   height="1350"
-                  alt="Harkus SDS on a phone: the gas pump homepage and the Your brand section"
-                  class="project__shot project__shot--main"
+                  alt="Movie DB featured movie and trending grid on a phone"
+                  class="project__shot project__shot--tall"
+                  loading="lazy"
                 />
+              </div>
+              <div class="project__info">
+                <h3 class="project__title">MOVIE DB</h3>
+                <p class="project__description">
+                  Streaming sites keep showing movies you've already seen or
+                  don't want. Here, one click hides them for good. Browse what's
+                  popular, save favorites, and the app remembers it all next
+                  visit.
+                </p>
+                <ul class="project__tags">
+                  <li>React</li>
+                  <li>JavaScript</li>
+                  <li>TMDB API</li>
+                  <li>Styled Components</li>
+                </ul>
+                <a
+                  href="https://movie-database.netlify.app/"
+                  class="double__border"
+                  target="_blank"
+                  rel="noopener"
+                  >VISIT SITE</a
+                >
+              </div>
+            </article>
+            <article
+              class="project"
+              id="project-harkus"
+              role="tabpanel"
+              aria-labelledby="tab-harkus"
+            >
+              <div class="project__media">
                 <img
                   src="./assets/images/projects_section/harkus-2.jpg"
                   width="1200"
                   height="750"
                   alt="Harkus SDS homepage on desktop with the red gas pump"
-                  class="project__shot project__shot--sub"
+                  class="project__shot project__shot--wide"
+                  loading="lazy"
+                />
+                <img
+                  src="./assets/images/projects_section/harkus-1.jpg"
+                  width="1200"
+                  height="1350"
+                  alt="Harkus SDS on a phone: the gas pump homepage and the Your brand section"
+                  class="project__shot project__shot--tall"
+                  loading="lazy"
                 />
               </div>
-            </div>
+              <div class="project__info">
+                <h3 class="project__title">HARKUS SDS</h3>
+                <p class="project__description">
+                  Harkus, the agency where I built WordPress sites for clients,
+                  needed a new site of its own. I built it from scratch with
+                  WordPress blocks, custom JavaScript and PHP. Follow the red
+                  line down the page.
+                </p>
+                <ul class="project__tags">
+                  <li>WordPress</li>
+                  <li>PHP</li>
+                  <li>JavaScript</li>
+                  <li>SCSS</li>
+                </ul>
+                <a
+                  href="http://harkus.com"
+                  class="double__border"
+                  target="_blank"
+                  rel="noopener"
+                  >VISIT SITE</a
+                >
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -466,8 +570,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="assets/js/slickSlider.js?v=2"></script>
-    <script src="assets/js/scripts.js?v=2"></script>
+    <script src="assets/js/scripts.js?v=3"></script>
   </body>
 </html>
