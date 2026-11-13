@@ -113,7 +113,6 @@
     top: 300px;
   }
 
-
 }
 
 @media (max-width: 1300px) {
@@ -126,29 +125,6 @@
 @media (max-width: 1200px) {
   .hero__title {
     padding: 10px 0;
-  }
-}
-
-@media (max-width: 960px) {
-  .flexing {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-  .project__left__column,
-  .project__right__column {
-    width: 80%;
-  }
-  .slick-list {
-    overflow: visible;
-  }
-  /* screenshots sit above the title when stacked; keep them apart */
-  .project__right__column {
-    padding-bottom: 50px;
-  }
-  .slick-dots {
-    top: -300px;
   }
 }
 
@@ -201,22 +177,6 @@
   }
   .about__mosaic {
     margin: -175px auto 75px;
-    position: static;
-  }
-  .projects__slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-    margin-top: 0;
-  }
-  .slick-list {
-    margin-top: 20px;
-  }
-  .slick-dots {
     position: static;
   }
 }
@@ -285,38 +245,11 @@
     position: static;
     margin: 0 20px;
   }
-  .about__description p,
-  .project__description {
+  .about__description p {
     font-size: 0.9rem;
   }
   .about__mosaic {
     margin-top: 35px;
-  }
-  .projects__section__title {
-    text-align: left;
-    margin: 40px 20px 0;
-  }
-  .slick-dots {
-    margin: 15px 0 0;
-    padding-left: 0;
-  }
-  .slick-dots li button {
-    width: 57px;
-    height: 57px;
-    padding: 0;
-    margin: 0 15px 0 0;
-    border-width: 3px;
-    font-size: 17px;
-  }
-  .project__left__column,
-  .project__right__column {
-    width: 100%;
-  }
-  .project__left__column {
-    padding-left: 0;
-  }
-  .project__right__column {
-    padding: 0 0 50px;
   }
   .footer p {
     font-size: 0.6rem;
@@ -385,29 +318,6 @@
   }
 }
 
-/* Tablet portrait: replace the old 350px slider offset / -300px dots hack with
-   normal flow (dots above the slides), so there's no empty gap */
-@media (min-width: 601px) and (max-width: 960px) {
-  /* pull the dots up into the title's row (title on the right, dots on the
-     left), lined up with the title like on laptops */
-  .projects__section__title {
-    margin-bottom: -40px;
-  }
-  .projects__slider {
-    display: flex;
-    flex-direction: column-reverse;
-    margin-top: 0;
-  }
-  .slick-dots {
-    position: static;
-    margin: 0;
-    padding-left: 15px;
-  }
-  .slick-list {
-    margin-top: 30px;
-  }
-}
-
 /* Tablet portrait (iPad mini 768px etc.) */
 @media (min-width: 601px) and (max-width: 960px) {
   .hero__title__block {
@@ -422,19 +332,125 @@
   }
 }
 
-/* Laptops 1201–1400px: the stretched projects frame's bottom photo strip
-   starts ~80% down; extra height keeps the screenshots clear of it */
-@media (min-width: 1201px) and (max-width: 1400px) {
-  .projects {
-    padding-bottom: 50px;
+/* Projects: narrower index on small laptops */
+@media (max-width: 1300px) {
+  .projects__index {
+    flex-basis: 250px;
   }
 }
 
-/* The frame's black box ends ~87% across, with a photo strip to its right;
-   keep the slider (and the screenshots) inside the box */
-@media (min-width: 901px) {
-  .projects__slider {
-    width: 80%;
-    margin: 0 0 0 5%;
+/* Projects, tablet portrait and phones: the index turns into a row of
+   project tabs above the stage, and the text sits under the screenshots */
+@media (max-width: 1200px) {
+  .projects {
+    padding-bottom: 12vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .projects__inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .projects__index {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .projects__list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 30px;
+  }
+  .projects__list::-webkit-scrollbar {
+    display: none;
+  }
+  .projects__tab {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 12px 14px 10px;
+    border: 0;
+    border-top: 3px solid #333;
+    white-space: nowrap;
+  }
+  .projects__tab.is-active {
+    border-top-color: var(--dark-theme-gold);
+  }
+  .projects__tab::before,
+  .projects__name small {
+    display: none;
+  }
+  .projects__name {
+    font-size: 0.7rem;
+  }
+  .projects__stage {
+    width: 100%;
+  }
+  .project__info {
+    margin: 30px 0 0;
+  }
+  .project__description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding-bottom: 40px;
+  }
+  .projects__inner {
+    width: auto;
+    margin: 0 20px;
+    padding-top: 40px;
+  }
+  .projects__section__title {
+    margin-bottom: 20px;
+  }
+  .project__shot {
+    border-width: 3px;
+    box-shadow:
+      0 0 0 2px var(--dark-theme-gold),
+      0 20px 40px rgba(0, 0, 0, 0.7);
+  }
+  .project__description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Projects, laptops and up: PROJECTS on its own row, so the screenshots start
+   level with the first project in the list; the stage is a bit narrower */
+@media (min-width: 961px) {
+  .projects__inner {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 4vw;
+    align-items: start;
+  }
+  .projects__index {
+    display: contents;
+  }
+  .projects__section__title {
+    grid-column: 1 / -1;
+  }
+  .projects__list {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .projects__stage {
+    grid-column: 2;
+    grid-row: 2;
+    width: 85%;
+  }
+  /* the text keeps the full column width, so descriptions stay at 4 lines */
+  .project__info {
+    margin-right: -17.6%;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1300px) {
+  .projects__inner {
+    grid-template-columns: 250px minmax(0, 1fr);
   }
 }

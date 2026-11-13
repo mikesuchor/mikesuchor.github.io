@@ -22,7 +22,22 @@ picture {
   display: contents;
 }
 
+/* no selecting text or dragging/long-pressing images anywhere on the page */
 html {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+html {
+  /* white text on black looks heavier than it is on Macs; this thins it */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   color: var(--white);
@@ -52,8 +67,14 @@ h3 {
   font-size: 2.5rem;
 }
 
-p {
+/* body text in DM Sans; headings, buttons and labels stay Raleway */
+p,
+.projects__name small {
+  font-family: 'DM Sans', sans-serif;
   font-weight: 300;
+}
+
+p {
   font-size: 0.5rem;
 }
 
@@ -64,6 +85,8 @@ a:visited {
 }
 
 .double__border {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   padding: 10px 30px;
   margin-top: 50px;
@@ -79,24 +102,39 @@ a:visited {
   box-shadow:
     0 0 0 0px var(--white),
     0 0 0 3px var(--dark-theme-gold);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+/* hover: a streak of light runs across the gold while the button grows a little */
+.double__border::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  pointer-events: none;
 }
 
 .double__border:hover {
   cursor: pointer;
-  color: var(--white);
-  border: 6px solid var(--white);
-  background: var(--dark-theme-gold);
-  -webkit-box-shadow:
-    0 0 5px var(--dark-theme-gold),
-    0 0 18px var(--dark-theme-gold),
-    0 0 36px var(--dark-theme-gold);
-  box-shadow:
-    0 0 5px var(--dark-theme-gold),
-    0 0 18px var(--dark-theme-gold),
-    0 0 36px var(--dark-theme-gold);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.double__border:hover::after {
+  -webkit-animation: shine 0.7s ease-out;
+  animation: shine 0.7s ease-out;
+}
+
+@keyframes shine {
+  to {
+    left: 130%;
+  }
 }
 
 /* Hero Section */
@@ -411,12 +449,14 @@ a:visited {
   }
 }
 
-/* Projects Section */
+/* Projects Section: index of projects on the left, the picked one on the stage */
 
 .projects {
   margin: 0;
   position: relative;
-  padding-bottom: 12vw;
+  /* the frame's bottom photo strip starts ~80% down the section; this keeps
+     the button above it */
+  padding-bottom: 16vw;
 }
 
 .projects__overlay {
@@ -431,124 +471,184 @@ a:visited {
   height: 100%;
 }
 
+/* the frame's black box ends ~87% across, with a photo strip to its right */
+.projects__inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 4vw;
+  width: 80%;
+  margin: 0 0 0 5%;
+  padding-top: 20px;
+}
+
+.projects__index {
+  flex: 0 0 300px;
+}
+
 .projects__section__title {
   position: relative;
-  text-align: right;
-  margin: 0 16vw 75px auto;
+  margin-bottom: 30px;
 }
 
-/* Projects Slider */
-.projects__slider {
-  width: 90%;
-  margin: 0 auto;
+.projects__list {
+  list-style: none;
 }
 
-.flexing {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  height: auto;
-  outline: none;
+.projects__tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  padding: 16px 0 16px 20px;
+  border: 0;
+  border-bottom: 1px solid #2a2a2a;
+  background: none;
+  font-family: inherit;
+  color: var(--white);
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: opacity 0.25s;
 }
 
-.project__left__column {
-  width: 40%;
-  padding-left: 30px;
-  padding-bottom: 12px;
+.projects__tab:hover,
+.projects__tab:focus-visible,
+.projects__tab.is-active {
+  opacity: 1;
 }
 
-.project__right__column {
-  width: 60%;
+.projects__tab:focus-visible {
+  outline: 2px solid var(--dark-theme-gold);
+  outline-offset: 2px;
 }
 
-.project__title {
-  overflow: hidden;
-  font-size: 32px;
-  font-weight: 800;
-  color: var(--dark-theme-gold);
+/* gold bar on the picked project */
+.projects__tab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 5px;
+  background: var(--dark-theme-gold);
+  transform: scaleY(0);
+  transition: transform 0.3s;
 }
 
-.project__description {
-  overflow: hidden;
-  padding: 20px 0 0;
-  font-size: 1rem;
-}
-
-.project__title span,
-.project__description span {
-  display: block;
-  -webkit-transition-delay: 4s;
-  -o-transition-delay: 4s;
-  transition-delay: 4s;
-  -webkit-transition: -webkit-transform 0.75s ease-in-out;
-  transition: -webkit-transform 0.75s ease-in-out;
-  -o-transition: transform 0.75s ease-in-out;
-  transition: transform 0.75s ease-in-out;
-  transition:
-    transform 0.75s ease-in-out,
-    -webkit-transform 0.75s ease-in-out;
-  -webkit-transform: translateY(105%) translateZ(0);
-  transform: translateY(105%) translateZ(0);
-}
-
-.slick-active .project__title span,
-.slick-active .project__description span {
-  -webkit-transform: none;
-  -ms-transform: none;
+.projects__tab.is-active::before {
   transform: none;
 }
 
-.slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  list-style-type: none;
-  top: -115px;
-  left: 15px;
-}
-
-.slick-dots li button {
-  font-size: 22px;
+.projects__name {
+  font-size: 0.9rem;
   font-weight: 800;
-  padding: 10px 15px;
-  border: 3px solid var(--dark-theme-gold);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: none;
-  cursor: pointer;
-  outline: none;
-  color: var(--white);
-  width: 75px;
-  height: 75px;
-  border-radius: 100%;
-  margin: 0 10px;
+  letter-spacing: 0.03em;
 }
 
-.slick-dots .slick-active button {
-  background-color: var(--dark-theme-gold);
-  color: var(--black);
+.projects__tab.is-active .projects__name {
+  color: var(--dark-theme-gold);
+}
+
+.projects__name small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #bbb;
+}
+
+/* every project sits in the same grid cell, so the stage is as tall as the
+   tallest one and nothing jumps when you switch */
+.projects__stage {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+}
+
+.project {
+  grid-area: 1 / 1;
+  visibility: hidden;
+}
+
+.project.is-active {
+  visibility: visible;
+}
+
+/* wide (desktop) shot top right, tall (phone) shot overlapping it bottom
+   left; % margins and positions are relative to the stage width */
+.project__media {
+  position: relative;
+  aspect-ratio: 1 / 0.6525;
+}
+
+.project__shot {
+  position: absolute;
+  display: block;
+  height: auto;
+  border: 5px solid var(--black);
+  background: #111;
+  box-shadow:
+    0 0 0 3px var(--dark-theme-gold),
+    0 30px 60px rgba(0, 0, 0, 0.7);
+}
+
+.project__shot--wide {
+  top: 0;
+  right: 0;
+  width: 81%;
+  /* shadow to the sides only, so it doesn't darken the text underneath */
+  box-shadow:
+    0 0 0 3px var(--dark-theme-gold),
+    0 10px 30px -12px rgba(0, 0, 0, 0.7);
+}
+
+.project__shot--tall {
+  top: 41.4%;
+  left: 0;
+  width: 34%;
+  z-index: 1;
+}
+
+.project__info {
+  margin: -10% 0 0 39%;
+}
+
+/* the name is already in the index; keep it for screen readers */
+.project__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.project__description {
+  font-size: 0.8rem;
+  line-height: 1.55;
 }
 
 .project__tags {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 20px 0 0;
+  margin: 18px 0 0;
   padding: 0;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 600;
   line-height: 1.9;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--dark-theme-gold);
-  /* Clips the dot in front of whichever tag starts a line (see below). */
+  /* clips the dot in front of whichever tag starts a line (see below) */
   overflow: hidden;
 }
 
-/* A dot between tags. Each tag's dot sits in the gap to its left; the first tag on
-   every line has its dot pushed outside the list, where overflow: hidden cuts it off,
-   so a wrapped line never starts with a stray dot. */
+/* a dot between tags; the first tag on every line has its dot pushed outside
+   the list, where overflow: hidden cuts it off */
 .project__tags li {
   margin-right: 1.4em;
 }
@@ -561,49 +661,36 @@ a:visited {
   text-align: center;
 }
 
-.project__right__column {
-  padding: 0 20px;
+.project__info .double__border {
+  margin-top: 26px;
 }
 
-.project__media {
-  position: relative;
-  max-width: 560px;
-  margin: 0 auto;
-  aspect-ratio: 1 / 0.88;
+/* entrance: shots slide in, text fades up, each time a project is picked
+   (and again when the section scrolls into view) */
+.projects.in-view .project.is-active .project__shot--wide {
+  animation: 0.9s cubic-bezier(0.22, 1, 0.36, 1) shotWide backwards;
 }
 
-.project__shot {
-  position: absolute;
-  display: block;
-  height: auto;
-  border: 4px solid var(--dark-theme-gold);
-  background: #111;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+.projects.in-view .project.is-active .project__shot--tall {
+  animation: 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s shotTall backwards;
 }
 
-.project__shot--main {
-  top: 0;
-  left: 0;
-  width: 62%;
-  z-index: 1;
+.projects.in-view .project.is-active .project__info {
+  animation: 0.7s ease-out 0.25s infoIn backwards;
 }
 
-.project__shot--sub {
-  right: 0;
-  bottom: 0;
-  width: 64%;
-  z-index: 2;
+@keyframes shotWide {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.slick-active .project__shot--main.animated {
-  animation: 1s cubic-bezier(0.22, 1, 0.36, 1) shotMain backwards;
-}
-
-.slick-active .project__shot--sub.animated {
-  animation: 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s shotSub backwards;
-}
-
-@keyframes shotMain {
+@keyframes shotTall {
   from {
     opacity: 0;
     transform: translateY(60px);
@@ -614,10 +701,10 @@ a:visited {
   }
 }
 
-@keyframes shotSub {
+@keyframes infoIn {
   from {
     opacity: 0;
-    transform: translate(60px, 30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -626,8 +713,8 @@ a:visited {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .project__shot {
-    opacity: 1;
+  .project__shot,
+  .project__info {
     animation: none !important;
   }
 }
