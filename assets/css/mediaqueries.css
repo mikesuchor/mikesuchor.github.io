@@ -426,6 +426,7 @@
     display: grid;
     grid-template-columns: 300px minmax(0, 1fr);
     column-gap: 4vw;
+    row-gap: 0;
     align-items: start;
   }
   .projects__index {
