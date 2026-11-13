@@ -85,6 +85,8 @@ a:visited {
 }
 
 .double__border {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   padding: 10px 30px;
   margin-top: 50px;
@@ -100,24 +102,39 @@ a:visited {
   box-shadow:
     0 0 0 0px var(--white),
     0 0 0 3px var(--dark-theme-gold);
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+/* hover: a streak of light runs across the gold while the button grows a little */
+.double__border::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+  -webkit-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+  pointer-events: none;
 }
 
 .double__border:hover {
   cursor: pointer;
-  color: var(--white);
-  border: 6px solid var(--white);
-  background: var(--dark-theme-gold);
-  -webkit-box-shadow:
-    0 0 5px var(--dark-theme-gold),
-    0 0 18px var(--dark-theme-gold),
-    0 0 36px var(--dark-theme-gold);
-  box-shadow:
-    0 0 5px var(--dark-theme-gold),
-    0 0 18px var(--dark-theme-gold),
-    0 0 36px var(--dark-theme-gold);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+
+.double__border:hover::after {
+  -webkit-animation: shine 0.7s ease-out;
+  animation: shine 0.7s ease-out;
+}
+
+@keyframes shine {
+  to {
+    left: 130%;
+  }
 }
 
 /* Hero Section */

@@ -418,3 +418,39 @@
     font-size: 0.9rem;
   }
 }
+
+/* Projects, laptops and up: PROJECTS on its own row, so the screenshots start
+   level with the first project in the list; the stage is a bit narrower */
+@media (min-width: 961px) {
+  .projects__inner {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 4vw;
+    align-items: start;
+  }
+  .projects__index {
+    display: contents;
+  }
+  .projects__section__title {
+    grid-column: 1 / -1;
+  }
+  .projects__list {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .projects__stage {
+    grid-column: 2;
+    grid-row: 2;
+    width: 85%;
+  }
+  /* the text keeps the full column width, so descriptions stay at 4 lines */
+  .project__info {
+    margin-right: -17.6%;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1300px) {
+  .projects__inner {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+}
