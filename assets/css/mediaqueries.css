@@ -409,10 +409,7 @@
     margin-bottom: 20px;
   }
   .project__shot {
-    border-width: 3px;
-    box-shadow:
-      0 0 0 2px var(--dark-theme-gold),
-      0 20px 40px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
   }
   .project__description {
     font-size: 0.9rem;
